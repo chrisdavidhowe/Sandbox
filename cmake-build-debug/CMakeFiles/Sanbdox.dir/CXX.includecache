@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/chrishowe/Documents/Sandbox/Sort/BubbleSort.cpp
+../Utils.h
+/Users/chrishowe/Documents/Sandbox/Utils.h
+
+/Users/chrishowe/Documents/Sandbox/Utils.h
+
+/Users/chrishowe/Documents/Sandbox/main.cpp
+main.h
+/Users/chrishowe/Documents/Sandbox/main.h
+Utils.h
+/Users/chrishowe/Documents/Sandbox/Utils.h
+cstdio
+-
+Sort/BubbleSort.cpp
+/Users/chrishowe/Documents/Sandbox/Sort/BubbleSort.cpp
+
+/Users/chrishowe/Documents/Sandbox/main.h
+

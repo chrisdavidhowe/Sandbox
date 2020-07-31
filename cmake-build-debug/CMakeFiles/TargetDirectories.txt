@@ -1,0 +1,3 @@
+/Users/chrishowe/Documents/Sandbox/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/chrishowe/Documents/Sandbox/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/chrishowe/Documents/Sandbox/cmake-build-debug/CMakeFiles/Sanbdox.dir
