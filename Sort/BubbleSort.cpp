@@ -4,7 +4,9 @@
 
 #include "../Utils.h"
 
-int bubbleSort(int* data, int length)
+//Worst sorting algorithm О(n2)
+
+void bubbleSort(int* data, int length)
 {
     int i = 0;
     int j = 0;

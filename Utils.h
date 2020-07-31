@@ -4,10 +4,16 @@
 
 #pragma once
 
-template <typename T>
-void swap(T* x, T* y)
+void swap(int* x, int* y)
 {
-    T temp = *x;
+    int temp = *x;
     *x = *y;
     *y = temp;
 }
+
+class Node
+{
+    public:
+    int value;
+    Node* next;
+};
