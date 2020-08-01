@@ -4,30 +4,43 @@
 
 #pragma once
 
+#include <cstdio>
+#include <stdlib.h>
+#include <stdio.h>
+
 class LinkedListNode
 {
     public:
 
     void setValue(int v);
     void setNext(LinkedListNode* n);
-    int getValue();
+    int  getValue();
     LinkedListNode* getNext_();
 
     private:
     int value_ {0};
-    LinkedListNode* next_;
+    LinkedListNode* next_ {nullptr};
 };
 
 class LinkedList
 {
 public:
-    //Pushes a node on top of list replacing the head
+    //Pushes a node on top of the list replacing the head
     void push(int value);
 
-    //Insert a node at a specific index
-    void insertAtIndex(int value, int index);
+    //Inserts a node after the provided node
+    void insert(LinkedListNode* node, int value);
 
-    int  getLength()
+    //Adds a node to the end of the current list
+    void append(int value);
+
+    //Return length
+    int  getLength();
+
+    //Print entire list
+    void print();
+
 private:
     LinkedListNode* head_ {nullptr};
+    int length_ {0};
 };
