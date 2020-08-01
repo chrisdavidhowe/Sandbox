@@ -4,19 +4,6 @@
 
 #pragma once
 
-class LinkedList
-{
-public:
-    void add(int value);
-    void insert(int index, int value);
-    int  length()
-    void removeByIndex(int index);
-    void removeByKey(int value);
-
-private:
-
-};
-
 class LinkedListNode
 {
     public:
@@ -29,4 +16,18 @@ class LinkedListNode
     private:
     int value_ {0};
     LinkedListNode* next_;
+};
+
+class LinkedList
+{
+public:
+    //Pushes a node on top of list replacing the head
+    void push(int value);
+
+    //Insert a node at a specific index
+    void insertAtIndex(int value, int index);
+
+    int  getLength()
+private:
+    LinkedListNode* head_ {nullptr};
 };
