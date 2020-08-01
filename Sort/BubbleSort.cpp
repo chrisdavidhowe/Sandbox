@@ -11,17 +11,15 @@ void bubbleSort(int* data, int length)
     int i = 0;
     int j = 0;
 
-    for (i = 0; i < length; i++)
+    //Iterate through entire data set
+    for (i = 0; i < length - 1; i++)
     {
-        for (j = 0; j < (length - i); j++)
+        //for current index 'i' compare against all elements 'i' through 'j', if greater than swap values
+        for (j = 0; j < (length - i - 1); j++)
         {
             if (data[j] > data[j+1])
             {
                 swap(&data[j], &data[j+1]);
-            }
-
-            if (data[j] == data[j+1])
-            {
             }
         }
     }

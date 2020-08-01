@@ -10,10 +10,15 @@
 int main (int argc, char *argv[])
 {
 
+    /* Bubble Sort Demo
+     * Worst Case O(n^2)
+     * Worst sorting algorithm possible
+     */
+
     static const int length = 10;
     int data[length] = {8, 12, 15, 1, 4, 10, 400, 3, 1000};
 
-    printf("Original Data \n");
+    printf(" Bubble Sort Original Data \n");
 
     for (int i = 0; i < length; ++i)
     {
@@ -22,10 +27,14 @@ int main (int argc, char *argv[])
 
     bubbleSort(&data[0], length);
 
-    printf("\n Sorted Data \n");
+    printf("\nBubble Sort Sorted Data \n");
     for (int i = 0; i < length; ++i)
     {
         printf("%d\t", data[i]);
     }
 
+
+    /* Insertion Sort Demo
+     *
+     * */
 }

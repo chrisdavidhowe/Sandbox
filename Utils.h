@@ -10,10 +10,3 @@ void swap(int* x, int* y)
     *x = *y;
     *y = temp;
 }
-
-class Node
-{
-    public:
-    int value;
-    Node* next;
-};
