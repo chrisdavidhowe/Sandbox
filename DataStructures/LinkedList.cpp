@@ -29,11 +29,11 @@ int LinkedListNode::getValue()
 
 void LinkedList::push(int v)
 {
-        LinkedListNode *new_node = new LinkedListNode();
-        new_node->setValue(v);
-        new_node->setNext(head_);
-        head_ = new_node;
-        length_++;
+    LinkedListNode *new_node = new LinkedListNode();
+    new_node->setValue(v);
+    new_node->setNext(head_);
+    head_ = new_node;
+    length_++;
 }
 
 void LinkedList::insert(LinkedListNode* prevNode, int value)
@@ -41,7 +41,7 @@ void LinkedList::insert(LinkedListNode* prevNode, int value)
     if (prevNode == nullptr)
     {
         printf("Provided Node cannot be NULL\n");
-        exit(-1);
+        return;
     }
 
     LinkedListNode* new_node = new LinkedListNode();
@@ -59,7 +59,8 @@ void LinkedList::append(int value)
     {
 
     }
-    else {
+    else
+    {
         end_node = head_->getNext_();
 
         for (int i = 0; i < length_ - 2; ++i) {
@@ -71,6 +72,8 @@ void LinkedList::append(int value)
         new_node->setValue(value);
         end_node->setNext(new_node);
     }
+
+    length_++;
 }
 
 int LinkedList::getLength()
@@ -78,12 +81,57 @@ int LinkedList::getLength()
     return length_;
 }
 
+LinkedListNode* LinkedList::getNode(int index)
+{
+    LinkedListNode* return_node;
+    return_node = head_->getNext_();
+
+    if (index == 0)
+    {
+        return head_;
+    }
+    else if (index == 1)
+    {
+        return head_->getNext_();
+    }
+    else
+    {
+        for (int i = 0; i < length_; ++i)
+        {
+            if (i == (index - 2))
+            {
+                return return_node->getNext_();
+            }
+            return_node = return_node->getNext_();
+        }
+    }
+}
+
+void LinkedList::removeNode(LinkedListNode* node)
+{
+    LinkedListNode* remove_node;
+    LinkedListNode* prev_node;
+
+    for (int i = 0; i < length_; ++i)
+    {
+        remove_node = getNode(i);
+
+        if (remove_node == node)
+        {
+            prev_node = getNode(i-1);
+            prev_node->setNext(remove_node->getNext_());
+            remove_node = nullptr;
+            length_--;
+        }
+    }
+}
+
 void LinkedList::print()
 {
     LinkedListNode* node;
     node = head_;
 
-    printf("Length %d\n", length_);
+    printf("Linked List Length %d\n", length_);
 
     for (int i = 0; i < length_; ++i)
     {

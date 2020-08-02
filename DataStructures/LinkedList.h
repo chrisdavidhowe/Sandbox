@@ -40,6 +40,12 @@ public:
     //Print entire list
     void print();
 
+    //Get specific node of list
+    LinkedListNode* getNode(int index);
+
+    //Remove a specific node
+    void removeNode(LinkedListNode* node);
+
 private:
     LinkedListNode* head_ {nullptr};
     int length_ {0};
