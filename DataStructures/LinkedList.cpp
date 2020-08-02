@@ -86,6 +86,12 @@ LinkedListNode* LinkedList::getNode(int index)
     LinkedListNode* return_node;
     return_node = head_->getNext_();
 
+    if ((index > length_ - 1) || (index < 0))
+    {
+        printf("Attempted access outside of linked list range\n");
+        return nullptr;
+    }
+
     if (index == 0)
     {
         return head_;
@@ -111,19 +117,26 @@ void LinkedList::removeNode(LinkedListNode* node)
 {
     LinkedListNode* remove_node;
     LinkedListNode* prev_node;
+    LinkedListNode* temp_node;
 
-    for (int i = 0; i < length_; ++i)
+    if (node == head_)
     {
-        remove_node = getNode(i);
-
-        if (remove_node == node)
+        head_ = head_->getNext_();
+    }
+    else
+    {
+        for (int i = 0; i < length_; ++i)
         {
-            prev_node = getNode(i-1);
-            prev_node->setNext(remove_node->getNext_());
-            remove_node = nullptr;
-            length_--;
+            remove_node = getNode(i);
+            if (remove_node == node)
+            {
+                prev_node = getNode(i - 1);
+                prev_node->setNext(remove_node->getNext_());
+                remove_node = nullptr;
+            }
         }
     }
+    length_--;
 }
 
 void LinkedList::print()

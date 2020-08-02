@@ -53,12 +53,30 @@ int main (int argc, char *argv[])
     LinkedListNode* temp_node = list.getNode(7);
     printf("Node 7 Value %d\n\n", temp_node->getValue());
     list.insert(temp_node, 360);
+    list.print();
+
+    // Remove kth from linked list
+    // This removes every 3rd node
+    int kth = 2;
+    for (int i = 0; i < list.getLength(); ++i)
+    {
+        if ((i % kth) == 0)
+        {
+            //Don't remove the head
+            if (i > 0)
+            {
+                list.removeNode(list.getNode(i));
+            }
+        }
+    }
 
     list.print();
 
-    list.removeNode(temp_node);
-
+    //remove head
+    list.removeNode(list.getNode(0));
     list.print();
+
+
 
 
     /* Insertion Sort Demo
