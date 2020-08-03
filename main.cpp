@@ -96,4 +96,9 @@ int main (int argc, char *argv[])
 
     doubleLinkedList.print();
 
+    doubleLinkedList.insert(doubleLinkedList.getNode(1), 16148);
+    doubleLinkedList.insertBefore(doubleLinkedList.getNode(6), 9999);
+    doubleLinkedList.insertBefore(doubleLinkedList.getNode(8), 8898);
+    doubleLinkedList.print();
+
 }

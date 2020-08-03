@@ -47,6 +47,44 @@ void DoubleLinkedList::push(int value)
     length_++;
 }
 
+void DoubleLinkedList::insertBefore(DoubleLinkedListNode* node, int value)
+{
+    DoubleLinkedListNode* new_node = new DoubleLinkedListNode();
+    new_node->setValue(value);
+    new_node->setPrev(node->getPrev());
+    new_node->setNext(node);
+    node->getPrev()->setNext(new_node);
+    node->setPrev(new_node);
+    length_++;
+}
+
+void DoubleLinkedList::insert(DoubleLinkedListNode *node, int value)
+{
+    DoubleLinkedListNode* new_node = new DoubleLinkedListNode();
+    new_node->setValue(value);
+    new_node->setPrev(node);
+    new_node->setNext(node->getNext());
+    node->getNext()->setPrev(new_node);
+    node->setNext(new_node);
+    length_++;
+}
+
+DoubleLinkedListNode* DoubleLinkedList::getNode(int index)
+{
+    DoubleLinkedListNode* return_node = head_;
+    for (int i = 0; i < length_; ++i)
+    {
+        if (i == index)
+        {
+            return return_node;
+        }
+        else
+        {
+            return_node = return_node->getNext();
+        }
+    }
+}
+
 void DoubleLinkedList::print()
 {
     DoubleLinkedListNode* node;
@@ -61,12 +99,13 @@ void DoubleLinkedList::print()
         node = node->getNext();
     }
 
+    /*
     printf("Print Backward\n");
     node = node->getPrev();
-
     for (int i = length_; i > 0; --i)
     {
         printf("Node %d : Value %d \n", i, node->getValue());
         node = node->getPrev();
     }
+    */
 }

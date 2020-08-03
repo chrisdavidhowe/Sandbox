@@ -44,7 +44,7 @@ public:
     void print();
 
     //Get specific node of list
-    DoubleLinkedList* getNode(int index);
+    DoubleLinkedListNode* getNode(int index);
 
     //Remove a specific node
     void removeNode(DoubleLinkedList* node);
