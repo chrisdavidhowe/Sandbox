@@ -23,10 +23,16 @@ stdlib.h
 -
 stdio.h
 -
+../Utils.h
+/Users/chrishowe/Documents/Sandbox/Utils.h
 
 /Users/chrishowe/Documents/Sandbox/Sort/BubbleSort.cpp
 ../Utils.h
 /Users/chrishowe/Documents/Sandbox/Utils.h
+
+/Users/chrishowe/Documents/Sandbox/Sort/InsertionSort.cpp
+../DataStructures/LinkedList.h
+/Users/chrishowe/Documents/Sandbox/DataStructures/LinkedList.h
 
 /Users/chrishowe/Documents/Sandbox/Utils.h
 
@@ -43,6 +49,8 @@ DataStructures/LinkedList.h
 /Users/chrishowe/Documents/Sandbox/DataStructures/LinkedList.h
 DataStructures/LinkedList.cpp
 /Users/chrishowe/Documents/Sandbox/DataStructures/LinkedList.cpp
+Sort/InsertionSort.cpp
+/Users/chrishowe/Documents/Sandbox/Sort/InsertionSort.cpp
 
 /Users/chrishowe/Documents/Sandbox/main.h
 

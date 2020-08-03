@@ -8,6 +8,7 @@
 #include "Sort/BubbleSort.cpp"
 #include "DataStructures/LinkedList.h"
 #include "DataStructures/LinkedList.cpp"
+#include "Sort/InsertionSort.cpp"
 
 int main (int argc, char *argv[])
 {
@@ -39,6 +40,7 @@ int main (int argc, char *argv[])
 
 
     //Linked List Demo
+    /*
     LinkedList list;
 
     for (int i = 0; i < length; ++i)
@@ -75,11 +77,13 @@ int main (int argc, char *argv[])
     //remove head
     list.removeNode(list.getNode(0));
     list.print();
+    */
 
 
 
 
-    /* Insertion Sort Demo
-     *
-     * */
+    /* Insertion Sort Demo */
+    insertionSort(data, length);
+
+
 }

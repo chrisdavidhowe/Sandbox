@@ -27,6 +27,16 @@ int LinkedListNode::getValue()
     return value_;
 }
 
+LinkedList::LinkedList():
+    sortDirection_(SortDirection::ASCENDING)
+{
+}
+
+LinkedList::LinkedList(SortDirection direction):
+    sortDirection_(direction)
+{
+}
+
 void LinkedList::push(int v)
 {
     LinkedListNode *new_node = new LinkedListNode();
@@ -113,6 +123,19 @@ LinkedListNode* LinkedList::getNode(int index)
     }
 }
 
+void LinkedList::swap(LinkedListNode *a, LinkedListNode *b)
+{
+    LinkedListNode* temp;
+    int temp_value;
+
+    temp = a->getNext_();
+    a->setNext(b->getNext_());
+    b->setNext(temp);
+    temp_value = a->getValue();
+    a->setValue(b->getValue());
+    b->setValue(temp_value);
+}
+
 void LinkedList::removeNode(LinkedListNode* node)
 {
     LinkedListNode* remove_node;
@@ -137,6 +160,101 @@ void LinkedList::removeNode(LinkedListNode* node)
         }
     }
     length_--;
+}
+
+void LinkedList::copy(int* data, int length)
+{
+    for (int i = 0; i < length; ++i)
+    {
+        this->push(data[i]);
+    }
+}
+
+void LinkedList::insertBefore(LinkedListNode *node, int value)
+{
+    if (node == nullptr)
+    {
+        printf("Provided Node cannot be NULL\n");
+        return;
+    }
+
+    if (node == head_)
+    {
+        LinkedListNode *new_node = new LinkedListNode();
+        new_node->setValue(value);
+        new_node->setNext(head_);
+        head_ = new_node;
+        length_++;
+    }
+    else if (node == head_->getNext_())
+    {
+        LinkedListNode *new_node = new LinkedListNode();
+        new_node->setValue(value);
+        new_node->setNext(node->getNext_());
+        node->setNext(new_node);
+        length_++;
+    }
+    else
+    {
+        LinkedListNode* temp;
+        temp = head_;
+
+        while (temp->getNext_() != node)
+        {
+            temp = temp->getNext_();
+        }
+
+        LinkedListNode *new_node = new LinkedListNode();
+        new_node->setValue(value);
+        new_node->setNext(node);
+        temp->setNext(new_node);
+        length_++;
+    }
+}
+
+void LinkedList::sortedInsert(int value)
+{
+    if ( (head_ == nullptr) || (head_->getValue() > value) )
+    {
+        LinkedListNode* new_node = new LinkedListNode();
+        new_node->setValue(value);
+        new_node->setNext(head_);
+        head_ = new_node;
+        length_++;
+    }
+    else
+    {
+        LinkedListNode* post = head_;
+        LinkedListNode* prev = nullptr;
+        bool insert = true;
+
+        while (value > post->getValue())
+        {
+            if (post->getNext_() == nullptr)
+            {
+                LinkedListNode* new_node = new LinkedListNode;
+                post->setNext(new_node);
+                new_node->setValue(value);
+                length_++;
+                insert = false;
+                break;
+            }
+            else
+            {
+                prev = post;
+                post = post->getNext_();
+            }
+        }
+
+        if (insert)
+        {
+            LinkedListNode *new_node = new LinkedListNode;
+            new_node->setValue(value);
+            prev->setNext(new_node);
+            new_node->setNext(post);
+            length_++;
+        }
+    }
 }
 
 void LinkedList::print()

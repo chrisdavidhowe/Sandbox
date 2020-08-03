@@ -10,3 +10,10 @@ void swap(int* x, int* y)
     *x = *y;
     *y = temp;
 }
+
+enum class SortDirection
+{
+    ASCENDING = 0,
+    DESCENDING
+};
+
