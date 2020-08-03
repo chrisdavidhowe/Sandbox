@@ -15,8 +15,8 @@ public:
     void setPrev(DoubleLinkedListNode* p);
 private:
     int value_ {0};
-    DoubleLinkedListNode* prev_;
-    DoubleLinkedListNode* next_;
+    DoubleLinkedListNode* prev_ {nullptr};
+    DoubleLinkedListNode* next_ {nullptr};
 };
 
 class DoubleLinkedList
@@ -26,13 +26,19 @@ public:
     void push(int value);
 
     //Inserts a node after the provided node
-    void insert(DoubleLinkedList* node, int value);
+    void insert(DoubleLinkedListNode* node, int value);
+
+    //Inserts a node before the given node
+    void insertBefore(DoubleLinkedListNode* node, int value);
+
+    //Insert Sorted
+    void insertSorted(int value);
 
     //Adds a node to the end of the current list
     void append(int value);
 
     //Return length
-    int  getLength();
+    int getLength();
 
     //Print entire list
     void print();

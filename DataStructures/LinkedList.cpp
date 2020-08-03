@@ -235,8 +235,8 @@ void LinkedList::sortedInsert(int value)
                 LinkedListNode* new_node = new LinkedListNode;
                 post->setNext(new_node);
                 new_node->setValue(value);
-                length_++;
                 insert = false;
+                length_++;
                 break;
             }
             else

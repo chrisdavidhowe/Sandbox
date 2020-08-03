@@ -6,6 +6,18 @@
 
 #IncludeRegexTransform: 
 
+/Users/chrishowe/Documents/Sandbox/DataStructures/DoubleLinkedList.cpp
+DoubleLinkedList.h
+/Users/chrishowe/Documents/Sandbox/DataStructures/DoubleLinkedList.h
+cstdio
+-
+stdlib.h
+-
+stdio.h
+-
+
+/Users/chrishowe/Documents/Sandbox/DataStructures/DoubleLinkedList.h
+
 /Users/chrishowe/Documents/Sandbox/DataStructures/LinkedList.cpp
 LinkedList.h
 /Users/chrishowe/Documents/Sandbox/DataStructures/LinkedList.h
@@ -51,6 +63,10 @@ DataStructures/LinkedList.cpp
 /Users/chrishowe/Documents/Sandbox/DataStructures/LinkedList.cpp
 Sort/InsertionSort.cpp
 /Users/chrishowe/Documents/Sandbox/Sort/InsertionSort.cpp
+DataStructures/DoubleLinkedList.h
+/Users/chrishowe/Documents/Sandbox/DataStructures/DoubleLinkedList.h
+DataStructures/DoubleLinkedList.cpp
+/Users/chrishowe/Documents/Sandbox/DataStructures/DoubleLinkedList.cpp
 
 /Users/chrishowe/Documents/Sandbox/main.h
 

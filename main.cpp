@@ -9,6 +9,8 @@
 #include "DataStructures/LinkedList.h"
 #include "DataStructures/LinkedList.cpp"
 #include "Sort/InsertionSort.cpp"
+#include "DataStructures//DoubleLinkedList.h"
+#include "DataStructures//DoubleLinkedList.cpp"
 
 int main (int argc, char *argv[])
 {
@@ -59,7 +61,7 @@ int main (int argc, char *argv[])
 
     // Remove kth from linked list
     // This removes every 3rd node
-    int kth = 2;
+    int kth = 3;
     for (int i = 0; i < list.getLength(); ++i)
     {
         if ((i % kth) == 0)
@@ -80,10 +82,18 @@ int main (int argc, char *argv[])
     */
 
 
-
-
     /* Insertion Sort Demo */
-    insertionSort(data, length);
+    //insertionSort(data, length);
 
+
+    /* Double Linked List */
+    DoubleLinkedList doubleLinkedList;
+
+    for (int i = 0; i < length; ++i)
+    {
+        doubleLinkedList.push(data[i]);
+    }
+
+    doubleLinkedList.print();
 
 }
