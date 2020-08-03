@@ -42,7 +42,7 @@ int main (int argc, char *argv[])
 
 
     //Linked List Demo
-    /*
+
     LinkedList list;
 
     for (int i = 0; i < length; ++i)
@@ -53,6 +53,11 @@ int main (int argc, char *argv[])
     list.print();
     list.append(6403);
     list.print();
+
+    list.erase();
+    list.print();
+
+    /*
 
     LinkedListNode* temp_node = list.getNode(7);
     printf("Node 7 Value %d\n\n", temp_node->getValue());
@@ -87,6 +92,7 @@ int main (int argc, char *argv[])
 
 
     /* Double Linked List */
+    /*
     DoubleLinkedList doubleLinkedList;
 
     for (int i = 0; i < length; ++i)
@@ -100,5 +106,18 @@ int main (int argc, char *argv[])
     doubleLinkedList.insertBefore(doubleLinkedList.getNode(6), 9999);
     doubleLinkedList.insertBefore(doubleLinkedList.getNode(8), 8898);
     doubleLinkedList.print();
+    */
+
+    /* Insertion Sort Double Linked List */
+
+    /*
+    DoubleLinkedList doubleLinkedList;
+    for (int i = 0; i < length; ++i)
+    {
+        doubleLinkedList.insertSorted(data[i]);
+    }
+
+    doubleLinkedList.print();
+    */
 
 }

@@ -271,3 +271,17 @@ void LinkedList::print()
     }
 }
 
+void LinkedList::erase()
+{
+    LinkedListNode* temp = head_;
+    LinkedListNode* free;
+    length_ = 0;
+    while (temp != nullptr)
+    {
+        free = temp;
+        temp = temp->getNext_();
+        delete free;
+    }
+    delete temp;
+}
+

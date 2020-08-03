@@ -60,6 +60,9 @@ public:
     void sortedInsert(int value);
     void insertBefore(LinkedListNode* node, int value);
 
+    //Erase
+    void erase();
+
 private:
     LinkedListNode* head_ {nullptr};
     int length_ {0};
