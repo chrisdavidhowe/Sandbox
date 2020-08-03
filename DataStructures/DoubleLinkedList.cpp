@@ -39,23 +39,39 @@ DoubleLinkedListNode* DoubleLinkedListNode::getPrev()
 
 void DoubleLinkedList::push(int value)
 {
-    DoubleLinkedListNode* new_node = new DoubleLinkedListNode();
-    new_node->setValue(value);
-    new_node->setNext(head_);
-    head_->setPrev(new_node);
-    head_ = new_node;
+    if (head_ == nullptr)
+    {
+        head_ = new DoubleLinkedListNode();
+        head_->setValue(value);
+    }
+    else {
+        DoubleLinkedListNode *new_node = new DoubleLinkedListNode();
+        new_node->setValue(value);
+        new_node->setNext(head_);
+        head_->setPrev(new_node);
+        head_ = new_node;
+    }
     length_++;
 }
 
 void DoubleLinkedList::insertBefore(DoubleLinkedListNode* node, int value)
 {
-    DoubleLinkedListNode* new_node = new DoubleLinkedListNode();
-    new_node->setValue(value);
-    new_node->setPrev(node->getPrev());
-    new_node->setNext(node);
-    node->getPrev()->setNext(new_node);
-    node->setPrev(new_node);
-    length_++;
+    if (node->getPrev() != nullptr)
+    {
+        DoubleLinkedListNode* new_node = new DoubleLinkedListNode();
+        new_node->setValue(value);
+
+        new_node->setPrev(node->getPrev());
+        new_node->setNext(node);
+
+        node->getPrev()->setNext(new_node);
+        node->setPrev(new_node);
+        length_++;
+    }
+    else
+    {
+        push(value);
+    }
 }
 
 void DoubleLinkedList::insert(DoubleLinkedListNode *node, int value)
@@ -96,60 +112,52 @@ void DoubleLinkedList::print()
     for (int i = 0; i < length_; ++i)
     {
         printf("Node %d : Value %d \n", i, node->getValue());
-        node = node->getNext();
+        if (node->getNext() != nullptr)
+        {
+            node = node->getNext();
+        }
     }
 
     printf("Print Backward\n");
-    node = node->getPrev();
+    
     for (int i = length_; i > 0; --i)
     {
         printf("Node %d : Value %d \n", i, node->getValue());
         node = node->getPrev();
     }
+
 }
 
 void DoubleLinkedList::insertSorted(int value)
 {
-    if (head_ == nullptr)
+    if ( (head_ == nullptr) || (head_->getValue() > value) )
     {
         push(value);
-    }
-    else if (head_->getNext() == nullptr)
-    {
-        if (value > head_->getValue())
-        {
-            DoubleLinkedListNode* new_node = new DoubleLinkedListNode();
-            new_node->setValue(value);
-            head_->setNext(new_node);
-            length_++;
-        }
-        else
-        {
-            push(value);
-        }
     }
     else
     {
         DoubleLinkedListNode* temp_node = head_;
-        bool insert = false;
+        bool end_of_list = false;
 
-        while (value > temp_node->getValue() )
+        while ( value > temp_node->getValue() )
         {
-            temp_node = temp_node->getNext();
-
             if (temp_node->getNext() == nullptr)
             {
                 DoubleLinkedListNode* new_node = new DoubleLinkedListNode();
                 new_node->setValue(value);
                 new_node->setPrev(temp_node);
                 temp_node->setNext(new_node);
-                insert = false;
+                end_of_list = true;
                 length_++;
                 break;
             }
+            else
+            {
+                temp_node = temp_node->getNext();
+            }
         }
 
-        if (insert)
+        if (!end_of_list)
         {
             insertBefore(temp_node, value);
         }

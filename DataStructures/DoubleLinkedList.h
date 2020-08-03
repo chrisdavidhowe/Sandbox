@@ -50,6 +50,6 @@ public:
     void removeNode(DoubleLinkedList* node);
 
 private:
-    DoubleLinkedListNode* head_;
+    DoubleLinkedListNode* head_ {nullptr};
     int length_ {0};
 };

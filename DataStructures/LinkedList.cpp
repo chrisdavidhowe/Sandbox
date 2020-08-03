@@ -226,7 +226,7 @@ void LinkedList::sortedInsert(int value)
     {
         LinkedListNode* post = head_;
         LinkedListNode* prev = nullptr;
-        bool insert = true;
+        bool end_of_list = false;
 
         while (value > post->getValue())
         {
@@ -235,7 +235,7 @@ void LinkedList::sortedInsert(int value)
                 LinkedListNode* new_node = new LinkedListNode;
                 post->setNext(new_node);
                 new_node->setValue(value);
-                insert = false;
+                end_of_list = true;
                 length_++;
                 break;
             }
@@ -246,7 +246,7 @@ void LinkedList::sortedInsert(int value)
             }
         }
 
-        if (insert)
+        if (!end_of_list)
         {
             LinkedListNode *new_node = new LinkedListNode;
             new_node->setValue(value);
