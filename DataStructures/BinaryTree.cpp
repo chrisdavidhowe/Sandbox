@@ -46,6 +46,9 @@ BinaryTreeNode* BinarySearchTree::construct(int* data, int start, int end, const
 {
     switch (mode)
     {
+        // O(n^2) due to searching for the indices to split the tree
+        // NOTE: can be optimized to O(n) with min/max checks instead of full index search
+
         case TraversalMode::PREORDER:
         {
             BinaryTreeNode* temp;
@@ -80,7 +83,7 @@ BinaryTreeNode* BinarySearchTree::construct(int* data, int start, int end, const
                 }
             }
 
-            // Recurively construct the left and right children
+            // Recursively construct the left and right children
             // Continuing the tree structure until start > end
             temp->setLeftChild( construct(data, start + 1, index - 1, TraversalMode::PREORDER) );
             temp->setRightChild( construct(data, index, end, TraversalMode::PREORDER) );
