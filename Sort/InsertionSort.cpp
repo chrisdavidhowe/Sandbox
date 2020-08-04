@@ -4,6 +4,12 @@
 
 #include "../DataStructures/LinkedList.h"
 
+// Best case complexity O(n)
+// Worst case complexity O(n^2)
+// Comparison Sort
+// Space Complexity 1
+// Non-recursive, best for data set sizes 10-50
+
 void insertionSort(int* data, int length)
 {
     LinkedList sorted_list;

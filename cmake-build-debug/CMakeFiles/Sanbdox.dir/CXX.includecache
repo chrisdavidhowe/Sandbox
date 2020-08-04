@@ -6,6 +6,14 @@
 
 #IncludeRegexTransform: 
 
+/Users/chrishowe/Documents/Sandbox/DataStructures/BinaryTree.cpp
+BinaryTree.h
+/Users/chrishowe/Documents/Sandbox/DataStructures/BinaryTree.h
+
+/Users/chrishowe/Documents/Sandbox/DataStructures/BinaryTree.h
+LinkedList.h
+/Users/chrishowe/Documents/Sandbox/DataStructures/LinkedList.h
+
 /Users/chrishowe/Documents/Sandbox/DataStructures/DoubleLinkedList.cpp
 DoubleLinkedList.h
 /Users/chrishowe/Documents/Sandbox/DataStructures/DoubleLinkedList.h
@@ -17,6 +25,8 @@ stdio.h
 -
 
 /Users/chrishowe/Documents/Sandbox/DataStructures/DoubleLinkedList.h
+BinaryTree.h
+/Users/chrishowe/Documents/Sandbox/DataStructures/BinaryTree.h
 
 /Users/chrishowe/Documents/Sandbox/DataStructures/LinkedList.cpp
 LinkedList.h
@@ -67,6 +77,10 @@ DataStructures/DoubleLinkedList.h
 /Users/chrishowe/Documents/Sandbox/DataStructures/DoubleLinkedList.h
 DataStructures/DoubleLinkedList.cpp
 /Users/chrishowe/Documents/Sandbox/DataStructures/DoubleLinkedList.cpp
+DataStructures/BinaryTree.h
+/Users/chrishowe/Documents/Sandbox/DataStructures/BinaryTree.h
+DataStructures/BinaryTree.cpp
+/Users/chrishowe/Documents/Sandbox/DataStructures/BinaryTree.cpp
 
 /Users/chrishowe/Documents/Sandbox/main.h
 

@@ -9,14 +9,16 @@
 #include "DataStructures/LinkedList.h"
 #include "DataStructures/LinkedList.cpp"
 #include "Sort/InsertionSort.cpp"
-#include "DataStructures//DoubleLinkedList.h"
-#include "DataStructures//DoubleLinkedList.cpp"
+#include "DataStructures/DoubleLinkedList.h"
+#include "DataStructures/DoubleLinkedList.cpp"
+#include "DataStructures/BinaryTree.h"
+#include "DataStructures/BinaryTree.cpp"
 
 int main (int argc, char *argv[])
 {
 
-    static const int length = 10;
-    int data[length] = {8, 12, 15, 1, 4, 10, 400, 3, 1000, 66};
+//    static const int length = 10;
+//    int data[length] = {8, 12, 15, 1, 4, 10, 400, 3, 1000, 66};
 
     /* Bubble Sort Demo
      * Worst Case O(n^2)
@@ -107,13 +109,23 @@ int main (int argc, char *argv[])
     */
 
     /* Insertion Sort Double Linked List */
-
+    /*
     DoubleLinkedList doubleLinkedList;
     for (int i = 0; i < length; ++i)
     {
         doubleLinkedList.insertSorted(data[i]);
     }
-
     doubleLinkedList.print();
+    */
+
+    /* Binary Search Tree Demo */
+    BinarySearchTree tree;
+
+    static const int length = 6;
+    int data[length] = {10, 5, 1, 7, 40, 50};
+
+    tree.construct(data, 0, length - 1, TraversalMode::PREORDER);
+    tree.print(tree.getRoot());
+
 
 }

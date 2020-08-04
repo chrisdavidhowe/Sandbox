@@ -4,6 +4,8 @@
 
 #pragma once
 
+#include "LinkedList.h"
+
 class BinaryTreeNode
 {
 public:
@@ -16,6 +18,29 @@ public:
 
 private:
     int value_ {0};
-    BinaryTreeNode* leftChild_;
-    BinaryTreeNode* rightChild_;
+    BinaryTreeNode* leftChild_ {nullptr};
+    BinaryTreeNode* rightChild_ {nullptr};
+};
+
+enum class TraversalMode
+{
+    INORDER,
+    PREORDER,
+    POSTORDER,
+    LEVELORDER
+};
+
+class BinarySearchTree
+{
+public:
+    BinaryTreeNode* newNode(int value);
+    BinaryTreeNode* construct(int* data, int start, int end, const TraversalMode mode);
+    void traverse(const TraversalMode mode);
+    void print(BinaryTreeNode* node);
+    BinaryTreeNode* getRoot();
+private:
+    BinaryTreeNode* root_ {nullptr};
+    LinkedList data_;
+    int index_  {0};
+    int length_ {0};
 };

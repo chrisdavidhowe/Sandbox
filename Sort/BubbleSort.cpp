@@ -4,7 +4,10 @@
 
 #include "../Utils.h"
 
-//Worst sorting algorithm О(n2)
+// Worst case complexity O(n^2)
+// Best case complexity O(n)
+// Comparison Sort Class
+// Space Complexity 1
 
 void bubbleSort(int* data, int length)
 {

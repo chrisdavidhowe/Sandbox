@@ -4,6 +4,8 @@
 
 #pragma once
 
+#include "BinaryTree.h"
+
 class DoubleLinkedListNode
 {
 public:
@@ -48,6 +50,9 @@ public:
 
     //Remove a specific node
     void removeNode(DoubleLinkedList* node);
+
+    //Convert a binary tree to a double linked list
+    void convertBinaryTree(BinarySearchTree* tree);
 
 private:
     DoubleLinkedListNode* head_ {nullptr};

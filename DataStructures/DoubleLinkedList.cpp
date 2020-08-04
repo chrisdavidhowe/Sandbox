@@ -119,7 +119,7 @@ void DoubleLinkedList::print()
     }
 
     printf("Print Backward\n");
-    
+
     for (int i = length_; i > 0; --i)
     {
         printf("Node %d : Value %d \n", i, node->getValue());
