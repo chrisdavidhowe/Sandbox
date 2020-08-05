@@ -21,6 +21,6 @@ public:
 
 private:
     int* data_;
-    int  length_  { 0 };
-    int capacity_ { 10 };
+    int  length_   { 0 };
+    int  capacity_ { 10 };
 };

@@ -46,7 +46,7 @@ void Test::queueTest()
 
     Queue queue(9);
 
-    for (int i = 0; i < length; ++i)
+    for (int i = 0; i < 12; ++i)
     {
         queue.enqueue(data[i]);
     }
@@ -58,6 +58,26 @@ void Test::queueTest()
     queue.print();
     queue.dequeue();
     queue.print();
+}
+
+void Test::stackTest()
+{
+    Stack stack;
+
+    for (int i = 0; i < length; ++i)
+    {
+        stack.push(data[i]);
+    }
+
+    stack.print();
+    stack.pop();
+    stack.print();
+    stack.pop();
+    stack.print();
+    stack.pop();
+    stack.print();
+
+
 }
 
 void Test::linkedListTest()

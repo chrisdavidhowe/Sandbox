@@ -16,6 +16,8 @@
 #include "DataStructures/BinaryTree.cpp"
 #include "DataStructures/Queue.h"
 #include "DataStructures/Queue.cpp"
+#include "DataStructures/Stack.h"
+#include "DataStructures/Stack.cpp"
 
 
 class Test
@@ -24,6 +26,7 @@ public:
     Test(int* data, int length);
     void bubbleSortTest();
     void queueTest();
+    void stackTest();
     void insertionSortTest();
     void linkedListTest();
     void doubleLinkedListTest();

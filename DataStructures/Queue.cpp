@@ -13,6 +13,7 @@ Queue::Queue(int cap):
 {
     data_ = new int[capacity_];
     memset(data_, 0, sizeof(int) * capacity_);
+    length_ = 0;
 }
 
 Queue::~Queue()
@@ -22,15 +23,14 @@ Queue::~Queue()
 
 void Queue::enqueue(int value)
 {
-    if (length_ > capacity_)
-    {
-        printf("Reached queue capacity!\n");
-    }
-
-    if (data_ != nullptr)
+    if (length_ < capacity_)
     {
         data_[length_] = value;
         length_++;
+    }
+    else
+    {
+        printf("Reached queue capacity!\n");
     }
 }
 

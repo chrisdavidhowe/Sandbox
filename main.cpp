@@ -18,5 +18,7 @@ int main (int argc, char *argv[])
 
     //tests.doubleLinkedListTest();
 
-    tests.queueTest();
+    //tests.queueTest();
+
+    tests.stackTest();
 }
