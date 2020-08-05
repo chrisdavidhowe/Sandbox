@@ -125,8 +125,25 @@ void DoubleLinkedList::print()
         printf("Node %d : Value %d \n", i, node->getValue());
         node = node->getPrev();
     }
-
 }
+
+void DoubleLinkedList::erase()
+{
+    DoubleLinkedListNode* temp;
+    temp = head_->getNext();
+    while (temp->getNext() != nullptr)
+    {
+        DoubleLinkedListNode* remove;
+        remove = temp;
+        temp = temp->getNext();
+        remove = nullptr;
+        delete remove;
+    }
+    delete head_;
+    head_ = nullptr;
+    length_ = 0;
+}
+
 
 void DoubleLinkedList::insertSorted(int value)
 {

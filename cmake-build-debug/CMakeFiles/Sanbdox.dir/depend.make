@@ -9,6 +9,8 @@ CMakeFiles/Sanbdox.dir/main.cpp.o: ../DataStructures/LinkedList.cpp
 CMakeFiles/Sanbdox.dir/main.cpp.o: ../DataStructures/LinkedList.h
 CMakeFiles/Sanbdox.dir/main.cpp.o: ../Sort/BubbleSort.cpp
 CMakeFiles/Sanbdox.dir/main.cpp.o: ../Sort/InsertionSort.cpp
+CMakeFiles/Sanbdox.dir/main.cpp.o: ../Test.cpp
+CMakeFiles/Sanbdox.dir/main.cpp.o: ../Test.h
 CMakeFiles/Sanbdox.dir/main.cpp.o: ../Utils.h
 CMakeFiles/Sanbdox.dir/main.cpp.o: ../main.cpp
 CMakeFiles/Sanbdox.dir/main.cpp.o: ../main.h

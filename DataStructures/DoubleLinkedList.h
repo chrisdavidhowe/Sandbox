@@ -54,6 +54,8 @@ public:
     //Convert a binary tree to a double linked list
     void convertBinaryTree(BinarySearchTree* tree);
 
+    void erase();
+
 private:
     DoubleLinkedListNode* head_ {nullptr};
     int length_ {0};

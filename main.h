@@ -4,3 +4,5 @@
 
 #pragma once
 
+#include "Test.cpp"
+#include "Test.h"

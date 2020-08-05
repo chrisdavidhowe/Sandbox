@@ -24,10 +24,10 @@ private:
 
 enum class TraversalMode
 {
-    INORDER,
-    PREORDER,
-    POSTORDER,
-    LEVELORDER
+    INORDER,   /* Left-Root-Right */
+    PREORDER,  /* Root-Left-Right */
+    POSTORDER, /* Left-Right-Root */
+    LEVELORDER /* Breadth First   */
 };
 
 class BinarySearchTree
