@@ -40,6 +40,26 @@ void Test::bubbleSortTest()
     }
 }
 
+void Test::queueTest()
+{
+    printf("Queue Demo \n");
+
+    Queue queue(9);
+
+    for (int i = 0; i < length; ++i)
+    {
+        queue.enqueue(data[i]);
+    }
+
+    queue.print();
+    queue.dequeue();
+    queue.print();
+    queue.dequeue();
+    queue.print();
+    queue.dequeue();
+    queue.print();
+}
+
 void Test::linkedListTest()
 {
     LinkedList list;

@@ -48,6 +48,20 @@ stdio.h
 ../Utils.h
 /Users/chrishowe/Documents/Sandbox/Utils.h
 
+/Users/chrishowe/Documents/Sandbox/DataStructures/Queue.cpp
+Queue.h
+/Users/chrishowe/Documents/Sandbox/DataStructures/Queue.h
+cstdio
+-
+stdlib.h
+-
+stdio.h
+-
+string.h
+-
+
+/Users/chrishowe/Documents/Sandbox/DataStructures/Queue.h
+
 /Users/chrishowe/Documents/Sandbox/Sort/BubbleSort.cpp
 ../Utils.h
 /Users/chrishowe/Documents/Sandbox/Utils.h
@@ -81,6 +95,10 @@ DataStructures/BinaryTree.h
 /Users/chrishowe/Documents/Sandbox/DataStructures/BinaryTree.h
 DataStructures/BinaryTree.cpp
 /Users/chrishowe/Documents/Sandbox/DataStructures/BinaryTree.cpp
+DataStructures/Queue.h
+/Users/chrishowe/Documents/Sandbox/DataStructures/Queue.h
+DataStructures/Queue.cpp
+/Users/chrishowe/Documents/Sandbox/DataStructures/Queue.cpp
 
 /Users/chrishowe/Documents/Sandbox/Utils.h
 

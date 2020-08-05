@@ -84,14 +84,37 @@ BinaryTreeNode* BinarySearchTree::construct(int* data, int start, int end, const
 
             // Recursively construct the left and right children
             // Continuing the tree structure until start > end
-            // Left child, < root
+            // Left child, Less than root
             temp->setLeftChild( construct(data, start + 1, index - 1, TraversalMode::PREORDER) );
-            // Right child, > root
+            // Right child, gReater than root
             temp->setRightChild( construct(data, index, end, TraversalMode::PREORDER) );
 
             // return created node
             return temp;
         }
+        break;
+
+        case TraversalMode::LEVELORDER:
+        {
+            BinaryTreeNode* temp;
+
+            // if start is greater than end then tree is fully constructed
+            if (start > end)
+            {
+                return nullptr;
+            }
+
+            //First item is head in Level Order Breadth First Construction
+            temp->setValue(data[0]);
+
+            for (int i = 0; i < end; ++i)
+            {
+                temp->setLeftChild( construct(data, i*2, end, TraversalMode::LEVELORDER));
+                temp->setRightChild( construct(data, (i*2)+1, end, TraversalMode::LEVELORDER));
+            }
+
+        }
+        break;
     }
 
 }
