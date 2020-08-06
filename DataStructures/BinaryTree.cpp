@@ -4,6 +4,10 @@
 
 #include "BinaryTree.h"
 
+BinaryTreeNode::BinaryTreeNode(int value) :
+    value_(value)
+{}
+
 int BinaryTreeNode::getValue()
 {
     return value_;
@@ -35,11 +39,85 @@ void BinaryTreeNode::setLeftChild(BinaryTreeNode *l)
 
 BinaryTreeNode* BinarySearchTree::newNode(int value)
 {
-    BinaryTreeNode* new_node = new BinaryTreeNode;
-    new_node->setValue(value);
+    BinaryTreeNode* new_node = new BinaryTreeNode(value);
     new_node->setLeftChild(nullptr);
     new_node->setRightChild(nullptr);
     return new_node;
+}
+
+void BinarySearchTree::insert(BinaryTreeNode* node, int value)
+{
+    printf("Inserting %d to BST\n", value);
+
+    if (node == nullptr)
+    {
+        root_ = newNode(value);
+        return;
+    }
+
+    //value already exists at root
+    if (node->getValue() == value)
+    {
+    }
+    //less than left child
+    else if (value < node->getValue())
+    {
+        if (node->getLeftChild() != nullptr)
+        {
+            insert(node->getLeftChild(), value);
+        }
+        else
+        {
+             node->setLeftChild(newNode(value));
+        }
+    }
+    //greater than right child
+    else
+    {
+        if (node->getRightChild() != nullptr)
+        {
+            insert(node->getRightChild(), value);
+        }
+        else
+        {
+            node->setRightChild(newNode(value));
+        }
+    }
+}
+
+
+void BinarySearchTree::traverse(BinaryTreeNode *node, const TraversalMode mode)
+{
+    switch (mode)
+    {
+        case TraversalMode::INORDER:
+            if (node == nullptr)
+            {
+                return;
+            }
+            traverse(node->getLeftChild(), mode);
+            printf("Node %d\n", node->getValue());
+            traverse(node->getRightChild(), mode);
+        break;
+        case TraversalMode::PREORDER:
+            if (node == nullptr)
+            {
+                return;
+            }
+            printf("Node %d\n", node->getValue());
+            traverse(node->getLeftChild(), mode);
+            traverse(node->getRightChild(), mode);
+            break;
+        case TraversalMode::POSTORDER:
+            if (node == nullptr)
+            {
+                return;
+            }
+            traverse(node->getLeftChild(), mode);
+            traverse(node->getRightChild(), mode);
+            printf("Node %d\n", node->getValue());
+            break;
+    }
 }
 
 BinaryTreeNode* BinarySearchTree::construct(int* data, int start, int end, const TraversalMode mode)
@@ -112,11 +190,9 @@ BinaryTreeNode* BinarySearchTree::construct(int* data, int start, int end, const
                 temp->setLeftChild( construct(data, i*2, end, TraversalMode::LEVELORDER));
                 temp->setRightChild( construct(data, (i*2)+1, end, TraversalMode::LEVELORDER));
             }
-
         }
         break;
     }
-
 }
 
 //Recursive Function to print in order tree

@@ -168,3 +168,17 @@ void Test::doubleLinkedListTest()
     doubleLinkedList.print();
 }
 
+void Test::binarySearchTreeTest()
+{
+    BinarySearchTree tree;
+
+    for (int i = 0; i < length; ++i)
+    {
+        tree.insert(tree.getRoot(), data[i]);
+    }
+    tree.traverse(tree.getRoot(), TraversalMode::INORDER);
+
+    tree.traverse(tree.getRoot(), TraversalMode::PREORDER);
+
+    tree.traverse(tree.getRoot(), TraversalMode::POSTORDER);
+}

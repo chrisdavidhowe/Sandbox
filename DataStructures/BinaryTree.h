@@ -9,6 +9,7 @@
 class BinaryTreeNode
 {
 public:
+    BinaryTreeNode(int value);
     int getValue();
     BinaryTreeNode* getLeftChild();
     BinaryTreeNode* getRightChild();
@@ -35,7 +36,9 @@ class BinarySearchTree
 public:
     BinaryTreeNode* newNode(int value);
     BinaryTreeNode* construct(int* data, int start, int end, const TraversalMode mode);
-    void traverse(const TraversalMode mode);
+    void insert(BinaryTreeNode* node, int value);
+    bool contains(BinaryTreeNode* node, int value);
+    void traverse(BinaryTreeNode* node, const TraversalMode mode);
     void print(BinaryTreeNode* node);
     BinaryTreeNode* getRoot();
 private:
