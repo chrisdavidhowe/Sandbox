@@ -18,7 +18,8 @@
 #include "DataStructures/Queue.cpp"
 #include "DataStructures/Stack.h"
 #include "DataStructures/Stack.cpp"
-
+#include "Random/Fibonacci.h"
+#include "Random/Fibonacci.cpp"
 
 class Test
 {
@@ -32,6 +33,7 @@ public:
     void doubleLinkedListTest();
     void binarySearchTreeTest();
     void redBlackTreeTest();
+    void fibonacciTest();
 
     void setData(int* data, int length);
 

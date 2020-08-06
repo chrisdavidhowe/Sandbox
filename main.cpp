@@ -20,5 +20,7 @@ int main (int argc, char *argv[])
 
     //tests.queueTest();
 
-    tests.stackTest();
+    //tests.stackTest();
+
+    tests.fibonacciTest();
 }

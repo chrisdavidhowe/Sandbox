@@ -16,4 +16,3 @@ enum class SortDirection
     ASCENDING = 0,
     DESCENDING
 };
-

@@ -11,6 +11,8 @@ CMakeFiles/Sanbdox.dir/main.cpp.o: ../DataStructures/Queue.cpp
 CMakeFiles/Sanbdox.dir/main.cpp.o: ../DataStructures/Queue.h
 CMakeFiles/Sanbdox.dir/main.cpp.o: ../DataStructures/Stack.cpp
 CMakeFiles/Sanbdox.dir/main.cpp.o: ../DataStructures/Stack.h
+CMakeFiles/Sanbdox.dir/main.cpp.o: ../Random/Fibonacci.cpp
+CMakeFiles/Sanbdox.dir/main.cpp.o: ../Random/Fibonacci.h
 CMakeFiles/Sanbdox.dir/main.cpp.o: ../Sort/BubbleSort.cpp
 CMakeFiles/Sanbdox.dir/main.cpp.o: ../Sort/InsertionSort.cpp
 CMakeFiles/Sanbdox.dir/main.cpp.o: ../Test.cpp

@@ -27,7 +27,7 @@ int Stack::peek()
 
 int Stack::length()
 {
-    return length_;s
+    return length_;
 }
 
 void Stack::print()

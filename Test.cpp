@@ -77,7 +77,15 @@ void Test::stackTest()
     stack.pop();
     stack.print();
 
+}
 
+void Test::fibonacciTest()
+{
+    Fibonacci fib;
+
+    int out = fib.calculate(9);
+
+    printf("%d", out);
 }
 
 void Test::linkedListTest()
