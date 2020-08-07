@@ -16,6 +16,12 @@ void Test::setData(int* d, int l)
     data = d;
 }
 
+void Test::arrayTest()
+{
+    int sum = 9;
+    twoSum(data, length, sum);
+}
+
 void Test::bubbleSortTest()
 {
     /* Bubble Sort Demo
@@ -181,4 +187,43 @@ void Test::binarySearchTreeTest()
     tree.traverse(tree.getRoot(), TraversalMode::PREORDER);
 
     tree.traverse(tree.getRoot(), TraversalMode::POSTORDER);
+}
+
+
+void Test::travellingSalesmanTest()
+{
+
+    City c1({0, 10, 15, 20});
+    City c2({10, 0, 35, 25});
+    City c3({15, 35, 0, 30});
+    City c4({20, 25, 30, 0});
+
+    std::vector<City> cities;
+
+    cities.push_back(c1);
+    cities.push_back(c2);
+    cities.push_back(c3);
+    cities.push_back(c4);
+
+    int startingCity = 2;
+    TravellingSalesman tsp(startingCity);
+
+    tsp.calculateShortestPath(cities, startingCity);
+}
+
+void Test::hashTableTest()
+{
+    HashTable hashTable(10);
+
+    hashTable.put("Mr. Mister");
+
+    for (int i = 0; i < 1000; ++i)
+    {
+        std::string temp = std::to_string(i);
+        hashTable.put(temp);
+    }
+
+    hashTable.print();
+
+    hashTable.search("Mr. Mister");
 }

@@ -7,7 +7,7 @@
 int main (int argc, char *argv[])
 {
     const int length = 10;
-    int data[length] = {8, 12, 15, 1, 4, 10, 400, 3, 1000, 66};
+    int data[length] = {8, 6, 15, 1, 4, 10, 400, 3, 1000, 66};
     Test tests(data, length);
 
     //tests.bubbleSortTest();
@@ -24,5 +24,11 @@ int main (int argc, char *argv[])
 
     //tests.fibonacciTest();
 
-    tests.binarySearchTreeTest();
+    //tests.binarySearchTreeTest();
+
+    //tests.arrayTest();
+
+    //tests.travellingSalesmanTest();
+
+    tests.hashTableTest();
 }

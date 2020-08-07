@@ -20,6 +20,12 @@
 #include "DataStructures/Stack.cpp"
 #include "Random/Fibonacci.h"
 #include "Random/Fibonacci.cpp"
+#include "Search/TwoSum.cpp"
+#include "Search/TravellingSalesman.h"
+#include "Search/TravellingSalesman.cpp"
+#include "DataStructures/HashTable.h"
+#include "DataStructures/HashTable.cpp"
+#include <stdlib.h>
 
 class Test
 {
@@ -34,6 +40,9 @@ public:
     void binarySearchTreeTest();
     void redBlackTreeTest();
     void fibonacciTest();
+    void arrayTest();
+    void travellingSalesmanTest();
+    void hashTableTest();
 
     void setData(int* data, int length);
 

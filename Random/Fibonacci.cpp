@@ -17,6 +17,7 @@ int Fibonacci::calculate(int n)
         if ( iterator != memoization_map_.end() )
         {
             output = iterator->second;
+            return output;
         }
         else
         {
