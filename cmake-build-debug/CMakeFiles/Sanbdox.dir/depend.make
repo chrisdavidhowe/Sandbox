@@ -20,6 +20,8 @@ CMakeFiles/Sanbdox.dir/main.cpp.o: ../Search/TravellingSalesman.h
 CMakeFiles/Sanbdox.dir/main.cpp.o: ../Search/TwoSum.cpp
 CMakeFiles/Sanbdox.dir/main.cpp.o: ../Sort/BubbleSort.cpp
 CMakeFiles/Sanbdox.dir/main.cpp.o: ../Sort/InsertionSort.cpp
+CMakeFiles/Sanbdox.dir/main.cpp.o: ../Sort/QuickSort.cpp
+CMakeFiles/Sanbdox.dir/main.cpp.o: ../Sort/QuickSort.h
 CMakeFiles/Sanbdox.dir/main.cpp.o: ../Test.cpp
 CMakeFiles/Sanbdox.dir/main.cpp.o: ../Test.h
 CMakeFiles/Sanbdox.dir/main.cpp.o: ../Utils.h

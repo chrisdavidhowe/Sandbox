@@ -25,6 +25,8 @@
 #include "Search/TravellingSalesman.cpp"
 #include "DataStructures/HashTable.h"
 #include "DataStructures/HashTable.cpp"
+#include "Sort/QuickSort.h"
+#include "Sort/QuickSort.cpp"
 #include <stdlib.h>
 
 class Test
@@ -43,8 +45,10 @@ public:
     void arrayTest();
     void travellingSalesmanTest();
     void hashTableTest();
+    void quickSortTest();
 
     void setData(int* data, int length);
+    void print();
 
 private:
     int* data;

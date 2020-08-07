@@ -30,5 +30,8 @@ int main (int argc, char *argv[])
 
     //tests.travellingSalesmanTest();
 
-    tests.hashTableTest();
+    //tests.hashTableTest();
+
+    tests.quickSortTest();
+    tests.print();
 }

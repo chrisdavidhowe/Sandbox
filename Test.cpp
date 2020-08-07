@@ -227,3 +227,19 @@ void Test::hashTableTest()
 
     hashTable.search("Mr. Mister");
 }
+
+void Test::quickSortTest()
+{
+    QuickSort quickSort;
+
+
+    quickSort.sort(data, 0, length - 1);
+}
+
+void Test::print()
+{
+    for (int i = 0; i < length; ++i)
+    {
+        printf("Index %d Value %d\n", i, data[i]);
+    }
+}

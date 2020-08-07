@@ -68,7 +68,7 @@ void BinarySearchTree::insert(BinaryTreeNode* node, int value)
         }
         else
         {
-             node->setLeftChild(newNode(value));
+            node->setLeftChild(newNode(value));
         }
     }
     //greater than right child

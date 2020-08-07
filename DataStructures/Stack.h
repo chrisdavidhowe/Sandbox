@@ -11,6 +11,11 @@ public:
     StackNode* next;
 };
 
+/* LIFO Last In First Out data structure
+ * Example : stack of plates :)
+ * */
+
+
 class Stack
 {
 public:
