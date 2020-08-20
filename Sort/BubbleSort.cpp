@@ -22,7 +22,7 @@ void bubbleSort(int* data, int length)
         {
             if (data[j] > data[j+1])
             {
-                swap(&data[j], &data[j+1]);
+                swap(data[j], data[j+1]);
             }
         }
     }

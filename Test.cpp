@@ -243,3 +243,19 @@ void Test::print()
         printf("Index %d Value %d\n", i, data[i]);
     }
 }
+
+void Test::epiTests()
+{
+    int test = 640;
+
+    bitParity(test);
+}
+
+void Test::heapSortTests()
+{
+    BinaryHeap heap;
+
+    print();
+    heap.construct(data, length);
+    heap.print();
+}

@@ -28,6 +28,9 @@
 #include "Sort/QuickSort.h"
 #include "Sort/QuickSort.cpp"
 #include <stdlib.h>
+#include "EPI/EPI.h"
+#include "DataStructures/BinaryHeap.h"
+#include "DataStructures/BinaryHeap.cpp"
 
 class Test
 {
@@ -46,6 +49,9 @@ public:
     void travellingSalesmanTest();
     void hashTableTest();
     void quickSortTest();
+    void heapSortTests();
+
+    void epiTests();
 
     void setData(int* data, int length);
     void print();

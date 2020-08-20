@@ -62,11 +62,13 @@ void BinarySearchTree::insert(BinaryTreeNode* node, int value)
     //less than left child
     else if (value < node->getValue())
     {
+        //if node left child already exist then recursively work down the left side of the branch
         if (node->getLeftChild() != nullptr)
         {
             insert(node->getLeftChild(), value);
         }
         else
+        //left child is null, so place value here.
         {
             node->setLeftChild(newNode(value));
         }
@@ -74,10 +76,12 @@ void BinarySearchTree::insert(BinaryTreeNode* node, int value)
     //greater than right child
     else
     {
+        //if right child does exist then work your way down the tree recursively
         if (node->getRightChild() != nullptr)
         {
             insert(node->getRightChild(), value);
         }
+        //if not then place value there
         else
         {
             node->setRightChild(newNode(value));

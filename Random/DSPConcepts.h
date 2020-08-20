@@ -2,12 +2,9 @@
 // Created by Chris Howe on 8/6/20.
 //
 
-#ifndef SANDBOX_DSPCONCEPTS_H
-#define SANDBOX_DSPCONCEPTS_H
-
-a(0) = 0;
-a(1) = 1;
-a(n) = a(n-1) + a(n-2)
+//a(0) = 0;
+//a(1) = 1;
+//a(n) = a(n-1) + a(n-2)
 
 
         int fib(int n)
@@ -31,7 +28,7 @@ a(n) = a(n-1) + a(n-2)
             int temp1 = 0;
             int temp2 = 1;
 
-            for (int i = 1; i < n; ++i)
+            for (int i = 0; i < n; ++i)
             {
                 ret = temp1 + temp2;
                 temp2 = temp1;
@@ -39,6 +36,3 @@ a(n) = a(n-1) + a(n-2)
             }
             return ret;
         }
-
-
-#endif //SANDBOX_DSPCONCEPTS_H

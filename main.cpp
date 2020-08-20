@@ -2,6 +2,8 @@
 // Created by Chris Howe on 7/31/20.
 //
 
+#include <cmath>
+
 #include "main.h"
 
 int main (int argc, char *argv[])
@@ -32,6 +34,10 @@ int main (int argc, char *argv[])
 
     //tests.hashTableTest();
 
-    tests.quickSortTest();
-    tests.print();
+    //tests.quickSortTest();
+    //tests.print();
+
+    //tests.epiTests();
+
+    tests.heapSortTests();
 }
