@@ -20,6 +20,7 @@
 #include "DataStructures/Stack.cpp"
 #include "Random/Fibonacci.h"
 #include "Random/Fibonacci.cpp"
+#include "Random/Bitwise.cpp"
 #include "Search/TwoSum.cpp"
 #include "Search/TravellingSalesman.h"
 #include "Search/TravellingSalesman.cpp"
@@ -50,6 +51,8 @@ public:
     void hashTableTest();
     void quickSortTest();
     void heapSortTests();
+    void bitWiseTests();
+
 
     void epiTests();
 

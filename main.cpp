@@ -39,5 +39,7 @@ int main (int argc, char *argv[])
 
     //tests.epiTests();
 
-    tests.heapSortTests();
+    //tests.heapSortTests();
+
+    tests.bitWiseTests();
 }

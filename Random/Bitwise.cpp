@@ -9,9 +9,12 @@
  * When value of ‘b’ becomes 1, the value of ‘res’ + ‘a’, gives us the result.
  * */
 
+
+#include <string>
+
 unsigned int russianPeasant(unsigned int a, unsigned int b)
 {
-    int res = 0;
+    int out = 0;
 
     // While second number doesn't become 1
     while (b > 0)
@@ -19,7 +22,7 @@ unsigned int russianPeasant(unsigned int a, unsigned int b)
         // If second number becomes odd, add the first number to result
         if (b & 1)
         {
-            res = res + a;
+            out += a;
         }
 
         // Double the first number
@@ -28,6 +31,58 @@ unsigned int russianPeasant(unsigned int a, unsigned int b)
         // Halve the second number
         b = b >> 1;
     }
-    return res;
+    return out;
 }
 
+int multiply(int x, int y)
+{
+    int out = 0;
+    while (y)
+    {
+        //if y is odd running sum x
+        if (y & 1)
+        {
+            out += x;
+        }
+        x <<= 1;
+        y >>= 1;
+    }
+    return out;
+};
+
+int add(int x, int y)
+{
+    unsigned int bit = 0;
+    while (y)
+    {
+        //calculate carry bit
+        bit = x & y;
+        x ^= y;
+        y = bit << 1;git
+    }
+    return x;
+}
+
+int sub(int x, int y)
+{
+    unsigned int bit = 0;
+    while (y)
+    {
+        bit = ~x & y;
+        x ^= y;
+        y = bit << 1;
+    }
+    return x;
+}
+
+std::string int2bin(int a)
+{
+    std::string s;
+    int k = 31;
+    for (int i = 31; i >= 0; i--)
+    {
+        s[k--] = (a & 1) + '0';
+        a >>= 1;
+    }
+    return s;
+}

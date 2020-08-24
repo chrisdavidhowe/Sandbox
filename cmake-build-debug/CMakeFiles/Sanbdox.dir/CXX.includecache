@@ -102,6 +102,10 @@ bitParity.cpp
 
 /Users/chrishowe/Documents/Sandbox/EPI/bitParity.cpp
 
+/Users/chrishowe/Documents/Sandbox/Random/Bitwise.cpp
+string
+-
+
 /Users/chrishowe/Documents/Sandbox/Random/Fibonacci.cpp
 Fibonacci.h
 /Users/chrishowe/Documents/Sandbox/Random/Fibonacci.h
@@ -177,6 +181,8 @@ Random/Fibonacci.h
 /Users/chrishowe/Documents/Sandbox/Random/Fibonacci.h
 Random/Fibonacci.cpp
 /Users/chrishowe/Documents/Sandbox/Random/Fibonacci.cpp
+Random/Bitwise.cpp
+/Users/chrishowe/Documents/Sandbox/Random/Bitwise.cpp
 Search/TwoSum.cpp
 /Users/chrishowe/Documents/Sandbox/Search/TwoSum.cpp
 Search/TravellingSalesman.h

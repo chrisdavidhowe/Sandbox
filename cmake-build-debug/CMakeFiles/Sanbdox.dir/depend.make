@@ -17,6 +17,7 @@ CMakeFiles/Sanbdox.dir/main.cpp.o: ../DataStructures/Stack.cpp
 CMakeFiles/Sanbdox.dir/main.cpp.o: ../DataStructures/Stack.h
 CMakeFiles/Sanbdox.dir/main.cpp.o: ../EPI/EPI.h
 CMakeFiles/Sanbdox.dir/main.cpp.o: ../EPI/bitParity.cpp
+CMakeFiles/Sanbdox.dir/main.cpp.o: ../Random/Bitwise.cpp
 CMakeFiles/Sanbdox.dir/main.cpp.o: ../Random/Fibonacci.cpp
 CMakeFiles/Sanbdox.dir/main.cpp.o: ../Random/Fibonacci.h
 CMakeFiles/Sanbdox.dir/main.cpp.o: ../Search/TravellingSalesman.cpp

@@ -259,3 +259,34 @@ void Test::heapSortTests()
     heap.construct(data, length);
     heap.print();
 }
+
+
+void Test::bitWiseTests()
+{
+
+    int a = 0b1000;
+    int b = 0b1100;
+    int c = 0b0110;
+
+    int mask = a | b;
+
+    c ^= (mask);
+
+    std::string s = int2bin(c);
+    printf("%s\n", s.c_str());
+
+
+    int x = 4;
+    int y = 10;
+
+    //add
+    int result = add(x, y);
+    printf("%d + %d = %d\n",x, y, result);
+    result = multiply(x, y);
+    printf("%d * %d = %d\n",x, y, result);
+
+    result = sub(x, y);
+    printf("%d - %d = %d\n",x, y, result);
+
+
+}
