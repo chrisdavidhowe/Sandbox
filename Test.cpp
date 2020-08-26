@@ -326,7 +326,7 @@ void Test::nintendoTests()
     */
 
 
-    //FunctionPointerTests();
+    FunctionPointerTests();
 
 }
 
