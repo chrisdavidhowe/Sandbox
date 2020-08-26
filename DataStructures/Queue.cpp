@@ -8,6 +8,7 @@
 #include <stdio.h>
 #include <string.h>
 
+/*
 Queue::Queue(int cap):
     capacity_(cap)
 {
@@ -60,3 +61,4 @@ void Queue::print()
     }
     printf("Queue Rear %d \n", data_[length_ - 1]);
 }
+*/

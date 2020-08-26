@@ -32,6 +32,10 @@
 #include "EPI/EPI.h"
 #include "DataStructures/BinaryHeap.h"
 #include "DataStructures/BinaryHeap.cpp"
+#include "Nintendo/NintendoHeader.h"
+#include <cstdint>
+#include <iostream>
+#include <sstream>
 
 class Test
 {
@@ -53,6 +57,7 @@ public:
     void heapSortTests();
     void bitWiseTests();
 
+    void nintendoTests();
 
     void epiTests();
 

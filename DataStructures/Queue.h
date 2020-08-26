@@ -8,6 +8,7 @@
  * but have to be processed in First In First Out (FIFO) order like Breadth First Search.
 */
 
+/*
 class Queue
 {
 public:
@@ -24,3 +25,4 @@ private:
     int  length_   { 0 };
     int  capacity_ { 10 };
 };
+*/

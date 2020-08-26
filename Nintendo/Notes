@@ -1,0 +1,16 @@
+C++ std::unique_ptr
+Know what it is
+Know how to code a very basic example
+
+Fixed Point Math
+Notation  https://en.wikipedia.org/wiki/Q_(number_format)
+How to represent and multiply complex numbers?
+How to convert fixed point representation to floating point?
+
+Function pointers
+How to declare a function pointer in C/C++
+How to make CPU go to a specific address. (You simply write the address to the pointer and call it.)
+
+How to downmix Dolby 5.1 (6 channel) audio down to stereo (2 channel)?
+Knowing how to draw a block diagram
+Maybe some simplistic code

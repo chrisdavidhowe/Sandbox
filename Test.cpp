@@ -57,13 +57,13 @@ void Test::queueTest()
         queue.enqueue(data[i]);
     }
 
-    queue.print();
-    queue.dequeue();
-    queue.print();
-    queue.dequeue();
-    queue.print();
-    queue.dequeue();
-    queue.print();
+//    queue.print();
+//    queue.dequeue();
+//    queue.print();
+//    queue.dequeue();
+//    queue.print();
+//    queue.dequeue();
+//    queue.print();
 }
 
 void Test::stackTest()
@@ -288,5 +288,45 @@ void Test::bitWiseTests()
     result = sub(x, y);
     printf("%d - %d = %d\n",x, y, result);
 
+}
+
+
+void Test::nintendoTests()
+{
+    /*
+    static const int size = 4;
+    int array[size] = { 1, 2, 127 , 254 };
+    byteArrayToString(array, size);
+
+    uint8_t hex_array[size] = { 0x13, 0x56, 0x9A, 0xBF };
+    hexArrayToString(hex_array, size);
+
+    std::cout << "Queue from two stacks" << std::endl;
+
+    Queue q(10);
+    q.enqueue(1);
+    q.enqueue(6);
+    q.enqueue(9);
+    q.enqueue(1000);
+
+    std::cout << q.dequeue() << '\n';
+    std::cout << q.dequeue() << '\n';
+    std::cout << q.dequeue() << '\n';
+    std::cout << q.dequeue() << '\n';
+
+    std::cout << "Check Endianess" << std::endl;
+
+    checkEndian();
+    */
+
+    /*
+    SmartPointers sp;
+    sp.moveExercise();
+    sp.countExercise();
+    */
+
+
+    //FunctionPointerTests();
 
 }
+

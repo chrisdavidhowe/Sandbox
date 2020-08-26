@@ -17,6 +17,12 @@ CMakeFiles/Sanbdox.dir/main.cpp.o: ../DataStructures/Stack.cpp
 CMakeFiles/Sanbdox.dir/main.cpp.o: ../DataStructures/Stack.h
 CMakeFiles/Sanbdox.dir/main.cpp.o: ../EPI/EPI.h
 CMakeFiles/Sanbdox.dir/main.cpp.o: ../EPI/bitParity.cpp
+CMakeFiles/Sanbdox.dir/main.cpp.o: ../Nintendo/FunctionPointers.cpp
+CMakeFiles/Sanbdox.dir/main.cpp.o: ../Nintendo/GeneralProgramming.cpp
+CMakeFiles/Sanbdox.dir/main.cpp.o: ../Nintendo/NintendoHeader.h
+CMakeFiles/Sanbdox.dir/main.cpp.o: ../Nintendo/Queue.cpp
+CMakeFiles/Sanbdox.dir/main.cpp.o: ../Nintendo/SmartPointers.cpp
+CMakeFiles/Sanbdox.dir/main.cpp.o: ../Nintendo/SmartPointers.h
 CMakeFiles/Sanbdox.dir/main.cpp.o: ../Random/Bitwise.cpp
 CMakeFiles/Sanbdox.dir/main.cpp.o: ../Random/Fibonacci.cpp
 CMakeFiles/Sanbdox.dir/main.cpp.o: ../Random/Fibonacci.h

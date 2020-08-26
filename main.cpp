@@ -42,4 +42,6 @@ int main (int argc, char *argv[])
     //tests.heapSortTests();
 
     tests.bitWiseTests();
+
+    //tests.nintendoTests();
 }

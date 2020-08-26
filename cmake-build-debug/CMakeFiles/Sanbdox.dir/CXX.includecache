@@ -102,6 +102,52 @@ bitParity.cpp
 
 /Users/chrishowe/Documents/Sandbox/EPI/bitParity.cpp
 
+/Users/chrishowe/Documents/Sandbox/Nintendo/FunctionPointers.cpp
+
+/Users/chrishowe/Documents/Sandbox/Nintendo/GeneralProgramming.cpp
+string
+-
+memory
+-
+
+/Users/chrishowe/Documents/Sandbox/Nintendo/NintendoHeader.h
+GeneralProgramming.cpp
+/Users/chrishowe/Documents/Sandbox/Nintendo/GeneralProgramming.cpp
+Queue.cpp
+/Users/chrishowe/Documents/Sandbox/Nintendo/Queue.cpp
+Queue.h
+/Users/chrishowe/Documents/Sandbox/Nintendo/Queue.h
+SmartPointers.cpp
+/Users/chrishowe/Documents/Sandbox/Nintendo/SmartPointers.cpp
+SmartPointers.h
+/Users/chrishowe/Documents/Sandbox/Nintendo/SmartPointers.h
+FunctionPointers.cpp
+/Users/chrishowe/Documents/Sandbox/Nintendo/FunctionPointers.cpp
+
+/Users/chrishowe/Documents/Sandbox/Nintendo/Queue.cpp
+Queue.h
+/Users/chrishowe/Documents/Sandbox/Nintendo/Queue.h
+
+/Users/chrishowe/Documents/Sandbox/Nintendo/SmartPointers.cpp
+SmartPointers.h
+/Users/chrishowe/Documents/Sandbox/Nintendo/SmartPointers.h
+string
+-
+vector
+-
+iostream
+-
+memory
+-
+utility
+-
+
+/Users/chrishowe/Documents/Sandbox/Nintendo/SmartPointers.h
+memory
+-
+vector
+-
+
 /Users/chrishowe/Documents/Sandbox/Random/Bitwise.cpp
 string
 -
@@ -205,6 +251,14 @@ DataStructures/BinaryHeap.h
 /Users/chrishowe/Documents/Sandbox/DataStructures/BinaryHeap.h
 DataStructures/BinaryHeap.cpp
 /Users/chrishowe/Documents/Sandbox/DataStructures/BinaryHeap.cpp
+Nintendo/NintendoHeader.h
+/Users/chrishowe/Documents/Sandbox/Nintendo/NintendoHeader.h
+cstdint
+-
+iostream
+-
+sstream
+-
 
 /Users/chrishowe/Documents/Sandbox/Utils.h
 

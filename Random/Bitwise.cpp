@@ -58,7 +58,7 @@ int add(int x, int y)
         //calculate carry bit
         bit = x & y;
         x ^= y;
-        y = bit << 1;git
+        y = bit << 1;
     }
     return x;
 }
@@ -74,6 +74,8 @@ int sub(int x, int y)
     }
     return x;
 }
+
+
 
 std::string int2bin(int a)
 {
