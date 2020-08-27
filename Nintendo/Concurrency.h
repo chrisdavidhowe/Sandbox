@@ -12,7 +12,15 @@
 
 #include "SmartPointers.h"
 
+using std;
+
 class Concurrency
 {
+public:
+    void run();
+
+    void thread1();
+    void thread2();
+    void thread3();
 
 };

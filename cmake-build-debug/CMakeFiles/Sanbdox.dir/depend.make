@@ -19,6 +19,7 @@ CMakeFiles/Sanbdox.dir/main.cpp.o: ../EPI/EPI.h
 CMakeFiles/Sanbdox.dir/main.cpp.o: ../EPI/bitParity.cpp
 CMakeFiles/Sanbdox.dir/main.cpp.o: ../Nintendo/FunctionPointers.cpp
 CMakeFiles/Sanbdox.dir/main.cpp.o: ../Nintendo/GeneralProgramming.cpp
+CMakeFiles/Sanbdox.dir/main.cpp.o: ../Nintendo/MyMalloc.cpp
 CMakeFiles/Sanbdox.dir/main.cpp.o: ../Nintendo/NintendoHeader.h
 CMakeFiles/Sanbdox.dir/main.cpp.o: ../Nintendo/Queue.cpp
 CMakeFiles/Sanbdox.dir/main.cpp.o: ../Nintendo/SmartPointers.cpp

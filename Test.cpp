@@ -325,8 +325,32 @@ void Test::nintendoTests()
     sp.countExercise();
     */
 
+    //FunctionPointerTests();
+    int n = 10;
+    float* testArrFloat;
+    testArrFloat = (float*)(myMalloc(sizeof(float) * n));
+    for (int i = 0; i < n; ++i)
+    {
+        testArrFloat[i] = i * 3.14;
+        printf("%d : %f\n", i, testArrFloat[i]);
+    }
 
-    FunctionPointerTests();
+    double* testArrFloat2;
+    testArrFloat2 = (double*)(myMalloc(sizeof(double) * n));
+    for (int i = 0; i < n; ++i)
+    {
+        testArrFloat2[i] = i * 101.f;
+        printf("%d : %f\n", i, testArrFloat[i]);
+    }
+
+    myFree(testArrFloat);
+    myFree(testArrFloat2);
+
+    for (int i = 0; i < n; ++i)
+    {
+        testArrFloat[i] = i * 3.14;
+        printf("%d : %f\n", i, testArrFloat[i]);
+    }
 
 }
 

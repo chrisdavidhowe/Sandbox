@@ -22,7 +22,7 @@ void SmartPointers::moveSwap(int &a, int &b)
 
 void SmartPointers::moveExercise()
 {
-    //The move function really does very little work.
+    // The move function really does very little work.
     // All move does is accept either an lvalue or rvalue argument,
     // and return it as an rvalue without triggering a copy construction
 
@@ -38,7 +38,7 @@ void SmartPointers::moveExercise()
         // of str will be moved into the vector.  This is less
         // expensive, but also means str might now be empty.
 
-        //std::move() is a cast that produces an rvalue-reference to an object, to enable moving from it.
+        //std::move() is a cast that produces an rvalue-reference to an object
         v.push_back(move(s));
         cout << "S " << s << endl;
         cout << "V " << v[0] << " " << v[1] << endl;

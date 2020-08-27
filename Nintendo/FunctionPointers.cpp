@@ -24,6 +24,12 @@ int subFunc(int a, int b)
     return out;
 }
 
+void doSomeMath( int (*fp)(int,int), int a, int b )
+{
+    printf("Doing some math!\n");
+    fp(a, b);
+}
+
 void FunctionPointerTests()
 {
     int (*fp) (int,int);
@@ -56,4 +62,7 @@ void FunctionPointerTests()
         }
     }
 
+    doSomeMath(&addFunc, 4, 8);
+    doSomeMath(&multFunc, 4, 8);
+    doSomeMath(&subFunc, 4, 8);
 }

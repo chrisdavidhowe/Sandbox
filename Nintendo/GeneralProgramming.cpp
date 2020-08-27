@@ -33,6 +33,8 @@ string hexArrayToString(uint8_t* array, int size)
         output += hex[(array[i] & 0xF)];
         output += ":";
     }
+
+
     //second nibble
     output += hex[(array[size-1] >> 4) & 0xF];
     //first nibble
@@ -57,18 +59,18 @@ void checkEndian()
     }
 }
 
-void container_of()
+//returns the address of a parent structure from
+//a member of the structure
+// implements the following
+// struct s address = <address of struct variable> - <offset of that variable in the struct>
+
+struct DLL_Node {
+    int value = 1;
+    DLL_Node* prev = nullptr;
+    DLL_Node* next = nullptr;
+};
+
+void container_of(void* ptr, void* type, void* member)
 {
-
-}
-
-
-void* customMalloc(size_t size)
-{
-
-}
-
-void customMemSet(void* src, void* dest, size_t size)
-{
-
+    //(type *)((char *)(ptr) - (char *) &((type *)0)->member)
 }
