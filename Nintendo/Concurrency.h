@@ -12,15 +12,18 @@
 
 #include "SmartPointers.h"
 
-using std;
+using namespace std;
 
 class Concurrency
 {
 public:
     void run();
 
-    void thread1();
-    void thread2();
-    void thread3();
+    thread t1();
+    thread t2();
+    thread t3();
+    thread t4();
 
+    condition_variable cv;
+    mutex mutex;
 };

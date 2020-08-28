@@ -117,6 +117,8 @@ vector
 -
 mutex
 -
+cmath
+/Users/chrishowe/Documents/Sandbox/Nintendo/cmath
 
 /Users/chrishowe/Documents/Sandbox/Nintendo/NintendoHeader.h
 GeneralProgramming.cpp
@@ -273,8 +275,6 @@ sstream
 /Users/chrishowe/Documents/Sandbox/Utils.h
 
 /Users/chrishowe/Documents/Sandbox/main.cpp
-cmath
--
 main.h
 /Users/chrishowe/Documents/Sandbox/main.h
 

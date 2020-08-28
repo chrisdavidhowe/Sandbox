@@ -264,18 +264,20 @@ void Test::heapSortTests()
 void Test::bitWiseTests()
 {
 
-    int a = 0b1000;
-    int b = 0b1100;
-    int c = 0b0110;
+    int a = 0b00000100;
+    int b = 0b00011000;
+    int c = 0b00000000;
 
     int mask = a | b;
 
     c ^= (mask);
 
-    std::string s = int2bin(c);
-    printf("%s\n", s.c_str());
+    std::string s = "";
+    readModifyWrite(&a, &b, 3, 2);
+    //s += int2bin(b);
+    //printf("%s\n", s.c_str());
 
-
+    /*
     int x = 4;
     int y = 10;
 
@@ -287,7 +289,7 @@ void Test::bitWiseTests()
 
     result = sub(x, y);
     printf("%d - %d = %d\n",x, y, result);
-
+    */
 }
 
 
@@ -326,6 +328,7 @@ void Test::nintendoTests()
     */
 
     //FunctionPointerTests();
+    /*
     int n = 10;
     float* testArrFloat;
     testArrFloat = (float*)(myMalloc(sizeof(float) * n));
@@ -351,6 +354,8 @@ void Test::nintendoTests()
         testArrFloat[i] = i * 3.14;
         printf("%d : %f\n", i, testArrFloat[i]);
     }
+    */
+
 
 }
 

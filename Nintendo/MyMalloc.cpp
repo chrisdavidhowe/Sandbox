@@ -5,6 +5,7 @@
 #include <memory>
 #include <vector>
 #include <mutex>
+#include "cmath"
 
 #define MALLOC_MAX_BYTES 500
 #define METADATA_SIZE sizeof(struct MemoryMetadata)
@@ -29,10 +30,11 @@ MemoryMetadata* memoryHead;
 
 void memorySplit(MemoryMetadata* current, size_t s)
 {
-    MemoryMetadata* newBlock = (MemoryMetadata*)((char*)current + s);
+    MemoryMetadata* newBlock = (MemoryMetadata*)(current + s);
     newBlock->size = (current->size) - s;
     newBlock->free = 1;
     newBlock->next = current->next;
+
     current->size = s;
     current->free = 0;
     current->next = newBlock;

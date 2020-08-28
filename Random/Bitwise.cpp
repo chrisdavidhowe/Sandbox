@@ -75,8 +75,6 @@ int sub(int x, int y)
     return x;
 }
 
-
-
 std::string int2bin(int a)
 {
     std::string s;
@@ -87,4 +85,19 @@ std::string int2bin(int a)
         a >>= 1;
     }
     return s;
+}
+
+
+int readModifyWrite(int* dest, int* src, int start, int width)
+{
+    printf("src %d dest %d\n", *src, *dest);
+
+    *src >>= start;
+    uint32_t mask = *src & ((1 << width) - 1);
+
+    printf("mask %d\n", mask);
+
+    *dest |= (mask << start);
+
+    printf("src %d dest %d\n", *src, *dest);
 }
