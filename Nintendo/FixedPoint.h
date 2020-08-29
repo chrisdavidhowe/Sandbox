@@ -17,6 +17,7 @@ public:
     fixedpoint_t sum(fixedpoint_t x, fixedpoint_t y);
     fixedpoint_t subtract(fixedpoint_t x, fixedpoint_t y);
     fixedpoint_t divide(fixedpoint_t x, fixedpoint_t y);
+    void saturate(fixedpoint_t& x, int numBits);
 private:
     const int numFractionalBits_ { 0 };
     const int fractionalMask_ { 0 };

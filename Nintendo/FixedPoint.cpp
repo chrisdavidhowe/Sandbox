@@ -16,37 +16,38 @@ FixedPoint::FixedPoint(int numFractionalBits, bool isSigned) :
 {
 }
 
+void FixedPoint::saturate(fixedpoint_t& x, int numBits)
+{
+    int max = (1 << numBits) - 1;
+    int min = ~max + 1;
+    if (x >= max) { x = max; }
+    if (x <= min) { x = min; }
+}
+
 fixedpoint_t FixedPoint::FloatToFixed(float x)
 {
-
-    fixedpoint_t y = (x * (1 << numFractionalBits_)) / numFractionalBits_;
-
-    //multiply by 2^N where N is the fractional bit
-    if (isSigned_)
-    {
-        //get twos complement if signed and negative, bit inversion and pull LSB high
-        if (x < 0) {
-            y = ~y + 1;
-        }
-    }
+    fixedpoint_t y = round(x * (1 << numFractionalBits_));
     return y;
 }
 
 float FixedPoint::FixedToFloat(fixedpoint_t x)
 {
-    //take absolute value of x
-    int sign = 1;
-    if (isSigned_)
-    {
-        if (x < 0)
-        {
-            x = ~x - 1;
-            sign = -1;
-        }
-    }
+    float y = (float) x / (1 << numFractionalBits_);
+    return y;
+}
 
-    float y = (float) ( x * numFractionalBits_ ) / (1 << numFractionalBits_);
-    return y * sign;
+fixedpoint_t FixedPoint::multiply(fixedpoint_t x, fixedpoint_t y)
+{
+    //calculate product
+    int64_t product = x * y;
+    fixedpoint_t result = product >> numFractionalBits_;
+    return result;
+}
+
+fixedpoint_t FixedPoint::sum(fixedpoint_t x, fixedpoint_t y)
+{
+    int64_t sum = (int64_t)x + y;
+    return sum;
 }
 
 void FixedPoint::print(fixedpoint_t x)
@@ -57,10 +58,6 @@ void FixedPoint::print(fixedpoint_t x)
     for (int i = 31; i >= 0; i--)
     {
         s[k--] = (x & 1) + '0';
-        if (i == numFractionalBits_ - 1)
-        {
-            s[k--] = '.';
-        }
         x >>= 1;
     }
     float f = FixedToFloat(t);
@@ -68,3 +65,4 @@ void FixedPoint::print(fixedpoint_t x)
     cout << "Binary " << s << endl;
     cout << "Float " <<  f << endl;
 }
+

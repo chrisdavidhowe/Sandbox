@@ -360,7 +360,11 @@ void Test::nintendoTests()
 
 void Test::fixedPointTests()
 {
-    FixedPoint fplib(24, true);
-    fixedpoint_t  x = fplib.FloatToFixed(3.14);
-    fplib.print(x);
+    FixedPoint fplib(16, false);
+    fixedpoint_t  x = fplib.FloatToFixed(1.5);
+    fixedpoint_t  y = fplib.FloatToFixed(5);
+    fixedpoint_t  result = fplib.multiply(x, y);
+
+    fplib.print(result);
+
 }
