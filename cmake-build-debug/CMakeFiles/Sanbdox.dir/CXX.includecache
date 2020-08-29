@@ -102,6 +102,18 @@ bitParity.cpp
 
 /Users/chrishowe/Documents/Sandbox/EPI/bitParity.cpp
 
+/Users/chrishowe/Documents/Sandbox/Nintendo/FixedPoint.cpp
+FixedPoint.h
+/Users/chrishowe/Documents/Sandbox/Nintendo/FixedPoint.h
+cstdint
+-
+iostream
+-
+math.h
+-
+
+/Users/chrishowe/Documents/Sandbox/Nintendo/FixedPoint.h
+
 /Users/chrishowe/Documents/Sandbox/Nintendo/FunctionPointers.cpp
 
 /Users/chrishowe/Documents/Sandbox/Nintendo/GeneralProgramming.cpp
@@ -265,6 +277,10 @@ DataStructures/BinaryHeap.cpp
 /Users/chrishowe/Documents/Sandbox/DataStructures/BinaryHeap.cpp
 Nintendo/NintendoHeader.h
 /Users/chrishowe/Documents/Sandbox/Nintendo/NintendoHeader.h
+Nintendo/FixedPoint.h
+/Users/chrishowe/Documents/Sandbox/Nintendo/FixedPoint.h
+Nintendo/FixedPoint.cpp
+/Users/chrishowe/Documents/Sandbox/Nintendo/FixedPoint.cpp
 cstdint
 -
 iostream

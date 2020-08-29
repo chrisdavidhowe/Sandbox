@@ -87,7 +87,6 @@ std::string int2bin(int a)
     return s;
 }
 
-
 int readModifyWrite(int* dest, int* src, int start, int width)
 {
     printf("src %d dest %d\n", *src, *dest);
@@ -100,4 +99,10 @@ int readModifyWrite(int* dest, int* src, int start, int width)
     *dest |= (mask << start);
 
     printf("src %d dest %d\n", *src, *dest);
+}
+
+int twosComplement(int x)
+{
+    int out = (~x) + 1;
+    return out;
 }

@@ -355,7 +355,12 @@ void Test::nintendoTests()
         printf("%d : %f\n", i, testArrFloat[i]);
     }
     */
-
-
 }
 
+
+void Test::fixedPointTests()
+{
+    FixedPoint fplib(24, true);
+    fixedpoint_t  x = fplib.FloatToFixed(3.14);
+    fplib.print(x);
+}

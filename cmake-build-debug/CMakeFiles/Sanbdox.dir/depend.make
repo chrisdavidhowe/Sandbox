@@ -17,6 +17,8 @@ CMakeFiles/Sanbdox.dir/main.cpp.o: ../DataStructures/Stack.cpp
 CMakeFiles/Sanbdox.dir/main.cpp.o: ../DataStructures/Stack.h
 CMakeFiles/Sanbdox.dir/main.cpp.o: ../EPI/EPI.h
 CMakeFiles/Sanbdox.dir/main.cpp.o: ../EPI/bitParity.cpp
+CMakeFiles/Sanbdox.dir/main.cpp.o: ../Nintendo/FixedPoint.cpp
+CMakeFiles/Sanbdox.dir/main.cpp.o: ../Nintendo/FixedPoint.h
 CMakeFiles/Sanbdox.dir/main.cpp.o: ../Nintendo/FunctionPointers.cpp
 CMakeFiles/Sanbdox.dir/main.cpp.o: ../Nintendo/GeneralProgramming.cpp
 CMakeFiles/Sanbdox.dir/main.cpp.o: ../Nintendo/MyMalloc.cpp

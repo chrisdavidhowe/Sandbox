@@ -33,6 +33,8 @@
 #include "DataStructures/BinaryHeap.h"
 #include "DataStructures/BinaryHeap.cpp"
 #include "Nintendo/NintendoHeader.h"
+#include "Nintendo/FixedPoint.h"
+#include "Nintendo/FixedPoint.cpp"
 #include <cstdint>
 #include <iostream>
 #include <sstream>
@@ -56,10 +58,9 @@ public:
     void quickSortTest();
     void heapSortTests();
     void bitWiseTests();
-
-    void nintendoTests();
-
     void epiTests();
+    void nintendoTests();
+    void fixedPointTests();
 
     void setData(int* data, int length);
     void print();

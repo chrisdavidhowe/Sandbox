@@ -10,6 +10,7 @@ int main (int argc, char *argv[])
     int data[length] = {8, 6, 15, 1, 4, 10, 400, 3, 1000, 66};
     Test tests(data, length);
 
+    tests.fixedPointTests();
 }
 
 
