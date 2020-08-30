@@ -34,7 +34,6 @@ string hexArrayToString(uint8_t* array, int size)
         output += ":";
     }
 
-
     //second nibble
     output += hex[(array[size-1] >> 4) & 0xF];
     //first nibble
@@ -59,8 +58,8 @@ void checkEndian()
     }
 }
 
-//returns the address of a parent structure from
-//a member of the structure
+// returns the address of a parent structure from
+// a member of the structure
 // implements the following
 // struct s address = <address of struct variable> - <offset of that variable in the struct>
 

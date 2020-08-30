@@ -102,6 +102,8 @@ bitParity.cpp
 
 /Users/chrishowe/Documents/Sandbox/EPI/bitParity.cpp
 
+/Users/chrishowe/Documents/Sandbox/Nintendo/Dolby.cpp
+
 /Users/chrishowe/Documents/Sandbox/Nintendo/FixedPoint.cpp
 FixedPoint.h
 /Users/chrishowe/Documents/Sandbox/Nintendo/FixedPoint.h
@@ -147,6 +149,8 @@ FunctionPointers.cpp
 /Users/chrishowe/Documents/Sandbox/Nintendo/FunctionPointers.cpp
 MyMalloc.cpp
 /Users/chrishowe/Documents/Sandbox/Nintendo/MyMalloc.cpp
+Dolby.cpp
+/Users/chrishowe/Documents/Sandbox/Nintendo/Dolby.cpp
 
 /Users/chrishowe/Documents/Sandbox/Nintendo/Queue.cpp
 Queue.h

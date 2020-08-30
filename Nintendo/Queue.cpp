@@ -9,6 +9,7 @@ using namespace Nintendo;
 void Queue::enqueue(int val)
 {
     if (s1.size() <= size_) {
+
         while (!s1.empty()) {
             s2.push(s1.top());
             s1.pop();
