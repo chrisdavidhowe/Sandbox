@@ -4,6 +4,8 @@
 
 // 1 / sqrt(2)
 // -3dB
+#include "cmath"
+
 static const float HALFPOWER { 1.f / sqrt(2.f) };
 
 struct Stereo_t {

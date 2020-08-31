@@ -5,17 +5,12 @@
 #include <memory>
 #include <vector>
 #include <mutex>
-#include "cmath"
 
-#define MALLOC_MAX_BYTES 500
+#define ARENA_START
+#define ARENA_SIZE 500
 #define METADATA_SIZE sizeof(struct MemoryMetadata)
-char MALLOC_POOL[MALLOC_MAX_BYTES];
+char MALLOC_POOL[ARENA_SIZE];
 mutex memory_access_lock;
-
-int nextPowerOfTwo(int x)
-{
-    return pow(2, ceil( log(x) / log(2) ) );
-}
 
 struct MemoryMetadata
 {
@@ -30,7 +25,7 @@ MemoryMetadata* memoryHead;
 
 void memorySplit(MemoryMetadata* current, size_t s)
 {
-    MemoryMetadata* newBlock = (MemoryMetadata*)(current + s);
+    MemoryMetadata* newBlock = (MemoryMetadata*)((char*)current + s);
     newBlock->size = (current->size) - s;
     newBlock->free = 1;
     newBlock->next = current->next;
@@ -70,12 +65,11 @@ void* myMalloc(size_t s)
     memory_access_lock.lock();
     if (memoryHead == nullptr)
     {
-        printf("First time MyMalloc has been called : Initializing with %d maximum bytes\n", MALLOC_MAX_BYTES);
+        printf("First time MyMalloc has been called : Initializing with %d maximum bytes\n", ARENA_SIZE);
         myMallocInit(sizeof(MALLOC_POOL));
     }
 
     MemoryMetadata* currentBlock;
-    void* mem_ptr;
     currentBlock = memoryHead;
 
     while ((currentBlock->free == 0) || (currentBlock->size < s) && (currentBlock->next != nullptr))
@@ -87,14 +81,14 @@ void* myMalloc(size_t s)
     {
         currentBlock->free = 0;
         currentBlock->size = s;
-        mem_ptr = (void*)(currentBlock + METADATA_SIZE);
-        printf("Allocating Memory Block %p \n", mem_ptr);
+        currentBlock->ptr = (void*)(currentBlock + METADATA_SIZE);
+        printf("Allocating Memory Block %p \n", currentBlock->ptr);
     }
     else if (currentBlock->size > s)
     {
         memorySplit(currentBlock, s);
-        mem_ptr = (void*)(currentBlock + METADATA_SIZE);
-        printf("Allocating Memory Block %p \n", mem_ptr);
+        currentBlock->ptr = (void*)(currentBlock + METADATA_SIZE);
+        printf("Allocating Memory Block %p \n", currentBlock->ptr);
     }
     else
     {
@@ -103,8 +97,7 @@ void* myMalloc(size_t s)
     }
 
     memory_access_lock.unlock();
-
-    return mem_ptr;
+    return currentBlock->ptr;
 }
 
 void myFree(void* p)

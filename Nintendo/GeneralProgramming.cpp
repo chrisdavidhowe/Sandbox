@@ -71,5 +71,23 @@ struct DLL_Node {
 
 void container_of(void* ptr, void* type, void* member)
 {
-    //(type *)((char *)(ptr) - (char *) &((type *)0)->member)
+/**
+ * container_of - cast a member of a structure out to the containing structure
+ * @ptr:	the pointer to the member.
+ * @type:	the type of the container struct this is embedded in.
+ * @member:	the name of the member within the struct.
+ *
+ */
+
+}
+
+void myMemMove(void* src, void* dest, size_t size)
+{
+    char* char_src = (char*)src;
+    char* char_dest = (char*)dest;
+
+    for (int i = 0; i < size; ++i)
+    {
+        char_dest[i] = char_src[i];
+    }
 }

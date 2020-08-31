@@ -35,6 +35,8 @@
 #include "Nintendo/NintendoHeader.h"
 #include "Nintendo/FixedPoint.h"
 #include "Nintendo/FixedPoint.cpp"
+#include "Nintendo/OOP.h"
+#include "Nintendo/OOP.cpp"
 #include <cstdint>
 #include <iostream>
 #include <sstream>

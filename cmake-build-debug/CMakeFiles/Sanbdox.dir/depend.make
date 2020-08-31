@@ -24,6 +24,8 @@ CMakeFiles/Sanbdox.dir/main.cpp.o: ../Nintendo/FunctionPointers.cpp
 CMakeFiles/Sanbdox.dir/main.cpp.o: ../Nintendo/GeneralProgramming.cpp
 CMakeFiles/Sanbdox.dir/main.cpp.o: ../Nintendo/MyMalloc.cpp
 CMakeFiles/Sanbdox.dir/main.cpp.o: ../Nintendo/NintendoHeader.h
+CMakeFiles/Sanbdox.dir/main.cpp.o: ../Nintendo/OOP.cpp
+CMakeFiles/Sanbdox.dir/main.cpp.o: ../Nintendo/OOP.h
 CMakeFiles/Sanbdox.dir/main.cpp.o: ../Nintendo/Queue.cpp
 CMakeFiles/Sanbdox.dir/main.cpp.o: ../Nintendo/SmartPointers.cpp
 CMakeFiles/Sanbdox.dir/main.cpp.o: ../Nintendo/SmartPointers.h

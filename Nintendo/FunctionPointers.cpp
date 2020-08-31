@@ -2,6 +2,7 @@
 // Created by Chris Howe on 8/26/20.
 //
 
+#include <functional>
 
 int addFunc(int a, int b)
 {
@@ -32,7 +33,11 @@ void doSomeMath( int (*fp)(int,int), int a, int b )
 
 void FunctionPointerTests()
 {
-    int (*fp) (int,int);
+    //C style
+    //int (*fp) (int,int);
+    //C++ style
+    std::function<int(int, int)> fp;
+
     fp = &addFunc;
     fp(4,5);
     fp = &multFunc;

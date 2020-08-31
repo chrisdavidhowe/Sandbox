@@ -20,4 +20,3 @@ public:
     ~Pizza() { cout << "Throwing out Pizza" << endl; };
     void Print() override { cout << "Pizza" << endl; };
 };
-

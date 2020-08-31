@@ -328,18 +328,19 @@ void Test::nintendoTests()
     */
 
     //FunctionPointerTests();
+
     /*
     int n = 10;
     float* testArrFloat;
     testArrFloat = (float*)(myMalloc(sizeof(float) * n));
     for (int i = 0; i < n; ++i)
     {
-        testArrFloat[i] = i * 3.14;
+        testArrFloat[i] = i;
         printf("%d : %f\n", i, testArrFloat[i]);
     }
 
-    double* testArrFloat2;
-    testArrFloat2 = (double*)(myMalloc(sizeof(double) * n));
+    float* testArrFloat2;
+    testArrFloat2 = (float*)(myMalloc(sizeof(float) * n));
     for (int i = 0; i < n; ++i)
     {
         testArrFloat2[i] = i * 101.f;
@@ -355,6 +356,21 @@ void Test::nintendoTests()
         printf("%d : %f\n", i, testArrFloat[i]);
     }
     */
+
+    Base b;
+    Derived d;
+
+    Base_Ctor(&b);
+    Derived_Ctor(&d);
+
+    int x = Base_Add(&b, 2);
+    int y = Base_Sub(&b, 2);
+    printf("Base Add %d Base Sub %d\n", x, y);
+
+    x = Derived_Add(&d, 2);
+    y = Derived_Sub(&d, 2);
+    printf("Derived Add %d Derived Sub %d\n", x, y);
+
 }
 
 

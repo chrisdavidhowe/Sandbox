@@ -103,6 +103,8 @@ bitParity.cpp
 /Users/chrishowe/Documents/Sandbox/EPI/bitParity.cpp
 
 /Users/chrishowe/Documents/Sandbox/Nintendo/Dolby.cpp
+cmath
+/Users/chrishowe/Documents/Sandbox/Nintendo/cmath
 
 /Users/chrishowe/Documents/Sandbox/Nintendo/FixedPoint.cpp
 FixedPoint.h
@@ -117,6 +119,8 @@ math.h
 /Users/chrishowe/Documents/Sandbox/Nintendo/FixedPoint.h
 
 /Users/chrishowe/Documents/Sandbox/Nintendo/FunctionPointers.cpp
+functional
+-
 
 /Users/chrishowe/Documents/Sandbox/Nintendo/GeneralProgramming.cpp
 string
@@ -131,8 +135,6 @@ vector
 -
 mutex
 -
-cmath
-/Users/chrishowe/Documents/Sandbox/Nintendo/cmath
 
 /Users/chrishowe/Documents/Sandbox/Nintendo/NintendoHeader.h
 GeneralProgramming.cpp
@@ -151,6 +153,14 @@ MyMalloc.cpp
 /Users/chrishowe/Documents/Sandbox/Nintendo/MyMalloc.cpp
 Dolby.cpp
 /Users/chrishowe/Documents/Sandbox/Nintendo/Dolby.cpp
+
+/Users/chrishowe/Documents/Sandbox/Nintendo/OOP.cpp
+OOP.h
+/Users/chrishowe/Documents/Sandbox/Nintendo/OOP.h
+
+/Users/chrishowe/Documents/Sandbox/Nintendo/OOP.h
+iostream
+-
 
 /Users/chrishowe/Documents/Sandbox/Nintendo/Queue.cpp
 Queue.h
@@ -285,6 +295,10 @@ Nintendo/FixedPoint.h
 /Users/chrishowe/Documents/Sandbox/Nintendo/FixedPoint.h
 Nintendo/FixedPoint.cpp
 /Users/chrishowe/Documents/Sandbox/Nintendo/FixedPoint.cpp
+Nintendo/OOP.h
+/Users/chrishowe/Documents/Sandbox/Nintendo/OOP.h
+Nintendo/OOP.cpp
+/Users/chrishowe/Documents/Sandbox/Nintendo/OOP.cpp
 cstdint
 -
 iostream
