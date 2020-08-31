@@ -4,6 +4,7 @@
 
 #include <string>
 #include <memory>
+#include "stddef.h"
 
 using namespace std;
 
@@ -69,7 +70,7 @@ struct DLL_Node {
     DLL_Node* next = nullptr;
 };
 
-void container_of(void* ptr, void* type, void* member)
+void* container_of(void* p, void* t, void* m)
 {
 /**
  * container_of - cast a member of a structure out to the containing structure
@@ -78,8 +79,20 @@ void container_of(void* ptr, void* type, void* member)
  * @member:	the name of the member within the struct.
  *
  */
-
+    //struct s address = <address of struct variable> - <offset of that variable in the struct>
+    //To get the OFFSET of that variable in the containing struct
+    // we create a zeroed struct ( i.e., a temp struct with the address 0x0 )
+    // so the addresses of any variables in the struct corresponds to the offset of that variable.
+    //a zeroed struct of the correct type with address at zero
+    //typeof(((t*)0)->member) *member_ptr = p;
+    //return (t*) ( (char*)member_ptr - offsetof(t, m);
 }
+
+#define offsetof(type, member) ((size_t) &((type*)0)->member)
+
+#define container_of(ptr, type, member) \
+const typeof( ((type *)0)->member ) *member_ptr = (ptr); \
+return (type *)( (char *)member_ptr - offsetof(type, member) );
 
 void myMemMove(void* src, void* dest, size_t size)
 {
