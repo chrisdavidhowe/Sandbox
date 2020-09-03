@@ -12,3 +12,5 @@
 #include "FunctionPointers.cpp"
 #include "MyMalloc.cpp"
 #include "Dolby.cpp"
+#include "VisitorPattern.h"
+#include "VisitorPattern.cpp"

@@ -16,6 +16,11 @@ CMakeFiles/Sanbdox.dir/main.cpp.o
  /Users/chrishowe/Documents/Sandbox/DataStructures/Queue.h
  /Users/chrishowe/Documents/Sandbox/DataStructures/Stack.cpp
  /Users/chrishowe/Documents/Sandbox/DataStructures/Stack.h
+ /Users/chrishowe/Documents/Sandbox/DesignPatterns/DesignPatternsHeader.h
+ /Users/chrishowe/Documents/Sandbox/DesignPatterns/Factory.cpp
+ /Users/chrishowe/Documents/Sandbox/DesignPatterns/Factory.h
+ /Users/chrishowe/Documents/Sandbox/DesignPatterns/Singleton.cpp
+ /Users/chrishowe/Documents/Sandbox/DesignPatterns/Singleton.h
  /Users/chrishowe/Documents/Sandbox/EPI/EPI.h
  /Users/chrishowe/Documents/Sandbox/EPI/bitParity.cpp
  /Users/chrishowe/Documents/Sandbox/Nintendo/Dolby.cpp
@@ -30,9 +35,12 @@ CMakeFiles/Sanbdox.dir/main.cpp.o
  /Users/chrishowe/Documents/Sandbox/Nintendo/Queue.cpp
  /Users/chrishowe/Documents/Sandbox/Nintendo/SmartPointers.cpp
  /Users/chrishowe/Documents/Sandbox/Nintendo/SmartPointers.h
+ /Users/chrishowe/Documents/Sandbox/Nintendo/VisitorPattern.cpp
+ /Users/chrishowe/Documents/Sandbox/Nintendo/VisitorPattern.h
  /Users/chrishowe/Documents/Sandbox/Random/Bitwise.cpp
  /Users/chrishowe/Documents/Sandbox/Random/Fibonacci.cpp
  /Users/chrishowe/Documents/Sandbox/Random/Fibonacci.h
+ /Users/chrishowe/Documents/Sandbox/Random/StringToInt.cpp
  /Users/chrishowe/Documents/Sandbox/Search/TravellingSalesman.cpp
  /Users/chrishowe/Documents/Sandbox/Search/TravellingSalesman.h
  /Users/chrishowe/Documents/Sandbox/Search/TwoSum.cpp

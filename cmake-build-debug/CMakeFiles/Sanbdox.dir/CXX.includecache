@@ -96,6 +96,28 @@ Stack.h
 
 /Users/chrishowe/Documents/Sandbox/DataStructures/Stack.h
 
+/Users/chrishowe/Documents/Sandbox/DesignPatterns/DesignPatternsHeader.h
+Factory.h
+/Users/chrishowe/Documents/Sandbox/DesignPatterns/Factory.h
+Factory.cpp
+/Users/chrishowe/Documents/Sandbox/DesignPatterns/Factory.cpp
+Singleton.h
+/Users/chrishowe/Documents/Sandbox/DesignPatterns/Singleton.h
+Singleton.cpp
+/Users/chrishowe/Documents/Sandbox/DesignPatterns/Singleton.cpp
+
+/Users/chrishowe/Documents/Sandbox/DesignPatterns/Factory.cpp
+Factory.h
+/Users/chrishowe/Documents/Sandbox/DesignPatterns/Factory.h
+
+/Users/chrishowe/Documents/Sandbox/DesignPatterns/Factory.h
+
+/Users/chrishowe/Documents/Sandbox/DesignPatterns/Singleton.cpp
+Singleton.h
+/Users/chrishowe/Documents/Sandbox/DesignPatterns/Singleton.h
+
+/Users/chrishowe/Documents/Sandbox/DesignPatterns/Singleton.h
+
 /Users/chrishowe/Documents/Sandbox/EPI/EPI.h
 bitParity.cpp
 /Users/chrishowe/Documents/Sandbox/EPI/bitParity.cpp
@@ -155,6 +177,10 @@ MyMalloc.cpp
 /Users/chrishowe/Documents/Sandbox/Nintendo/MyMalloc.cpp
 Dolby.cpp
 /Users/chrishowe/Documents/Sandbox/Nintendo/Dolby.cpp
+VisitorPattern.h
+/Users/chrishowe/Documents/Sandbox/Nintendo/VisitorPattern.h
+VisitorPattern.cpp
+/Users/chrishowe/Documents/Sandbox/Nintendo/VisitorPattern.cpp
 
 /Users/chrishowe/Documents/Sandbox/Nintendo/OOP.cpp
 OOP.h
@@ -188,6 +214,18 @@ memory
 vector
 -
 
+/Users/chrishowe/Documents/Sandbox/Nintendo/VisitorPattern.cpp
+VisitorPattern.h
+/Users/chrishowe/Documents/Sandbox/Nintendo/VisitorPattern.h
+
+/Users/chrishowe/Documents/Sandbox/Nintendo/VisitorPattern.h
+iostream
+-
+string
+-
+vector
+-
+
 /Users/chrishowe/Documents/Sandbox/Random/Bitwise.cpp
 string
 -
@@ -198,6 +236,10 @@ Fibonacci.h
 
 /Users/chrishowe/Documents/Sandbox/Random/Fibonacci.h
 map
+-
+
+/Users/chrishowe/Documents/Sandbox/Random/StringToInt.cpp
+string
 -
 
 /Users/chrishowe/Documents/Sandbox/Search/TravellingSalesman.cpp
@@ -301,6 +343,10 @@ Nintendo/OOP.h
 /Users/chrishowe/Documents/Sandbox/Nintendo/OOP.h
 Nintendo/OOP.cpp
 /Users/chrishowe/Documents/Sandbox/Nintendo/OOP.cpp
+DesignPatterns/DesignPatternsHeader.h
+/Users/chrishowe/Documents/Sandbox/DesignPatterns/DesignPatternsHeader.h
+Random/StringToInt.cpp
+/Users/chrishowe/Documents/Sandbox/Random/StringToInt.cpp
 cstdint
 -
 iostream

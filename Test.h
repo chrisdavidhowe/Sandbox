@@ -37,6 +37,8 @@
 #include "Nintendo/FixedPoint.cpp"
 #include "Nintendo/OOP.h"
 #include "Nintendo/OOP.cpp"
+#include "DesignPatterns/DesignPatternsHeader.h"
+#include "Random/StringToInt.cpp"
 #include <cstdint>
 #include <iostream>
 #include <sstream>

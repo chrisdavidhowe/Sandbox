@@ -329,7 +329,7 @@ void Test::nintendoTests()
 
     //FunctionPointerTests();
 
-    /*
+
     int n = 10;
     float* testArrFloat;
     testArrFloat = (float*)(myMalloc(sizeof(float) * n));
@@ -344,7 +344,7 @@ void Test::nintendoTests()
     for (int i = 0; i < n; ++i)
     {
         testArrFloat2[i] = i * 101.f;
-        printf("%d : %f\n", i, testArrFloat[i]);
+        printf("%d : %f\n", i, testArrFloat2[i]);
     }
 
     myFree(testArrFloat);
@@ -355,7 +355,7 @@ void Test::nintendoTests()
         testArrFloat[i] = i * 3.14;
         printf("%d : %f\n", i, testArrFloat[i]);
     }
-    */
+
 
     Base b;
     Derived d;
@@ -382,5 +382,4 @@ void Test::fixedPointTests()
     fixedpoint_t  result = fplib.multiply(x, y);
 
     fplib.print(result);
-
 }

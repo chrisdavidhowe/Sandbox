@@ -15,6 +15,11 @@ CMakeFiles/Sanbdox.dir/main.cpp.o: ../DataStructures/Queue.cpp
 CMakeFiles/Sanbdox.dir/main.cpp.o: ../DataStructures/Queue.h
 CMakeFiles/Sanbdox.dir/main.cpp.o: ../DataStructures/Stack.cpp
 CMakeFiles/Sanbdox.dir/main.cpp.o: ../DataStructures/Stack.h
+CMakeFiles/Sanbdox.dir/main.cpp.o: ../DesignPatterns/DesignPatternsHeader.h
+CMakeFiles/Sanbdox.dir/main.cpp.o: ../DesignPatterns/Factory.cpp
+CMakeFiles/Sanbdox.dir/main.cpp.o: ../DesignPatterns/Factory.h
+CMakeFiles/Sanbdox.dir/main.cpp.o: ../DesignPatterns/Singleton.cpp
+CMakeFiles/Sanbdox.dir/main.cpp.o: ../DesignPatterns/Singleton.h
 CMakeFiles/Sanbdox.dir/main.cpp.o: ../EPI/EPI.h
 CMakeFiles/Sanbdox.dir/main.cpp.o: ../EPI/bitParity.cpp
 CMakeFiles/Sanbdox.dir/main.cpp.o: ../Nintendo/Dolby.cpp
@@ -29,9 +34,12 @@ CMakeFiles/Sanbdox.dir/main.cpp.o: ../Nintendo/OOP.h
 CMakeFiles/Sanbdox.dir/main.cpp.o: ../Nintendo/Queue.cpp
 CMakeFiles/Sanbdox.dir/main.cpp.o: ../Nintendo/SmartPointers.cpp
 CMakeFiles/Sanbdox.dir/main.cpp.o: ../Nintendo/SmartPointers.h
+CMakeFiles/Sanbdox.dir/main.cpp.o: ../Nintendo/VisitorPattern.cpp
+CMakeFiles/Sanbdox.dir/main.cpp.o: ../Nintendo/VisitorPattern.h
 CMakeFiles/Sanbdox.dir/main.cpp.o: ../Random/Bitwise.cpp
 CMakeFiles/Sanbdox.dir/main.cpp.o: ../Random/Fibonacci.cpp
 CMakeFiles/Sanbdox.dir/main.cpp.o: ../Random/Fibonacci.h
+CMakeFiles/Sanbdox.dir/main.cpp.o: ../Random/StringToInt.cpp
 CMakeFiles/Sanbdox.dir/main.cpp.o: ../Search/TravellingSalesman.cpp
 CMakeFiles/Sanbdox.dir/main.cpp.o: ../Search/TravellingSalesman.h
 CMakeFiles/Sanbdox.dir/main.cpp.o: ../Search/TwoSum.cpp

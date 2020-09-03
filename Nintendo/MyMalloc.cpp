@@ -6,10 +6,10 @@
 #include <vector>
 #include <mutex>
 
-#define ARENA_START
 #define ARENA_SIZE 500
 #define METADATA_SIZE sizeof(struct MemoryMetadata)
 char MALLOC_POOL[ARENA_SIZE];
+char* ARENA_START = &MALLOC_POOL[0];
 mutex memory_access_lock;
 
 struct MemoryMetadata
@@ -25,7 +25,7 @@ MemoryMetadata* memoryHead;
 
 void memorySplit(MemoryMetadata* current, size_t s)
 {
-    MemoryMetadata* newBlock = (MemoryMetadata*)((char*)current + s);
+    MemoryMetadata* newBlock = (MemoryMetadata*)(current + s);
     newBlock->size = (current->size) - s;
     newBlock->free = 1;
     newBlock->next = current->next;
@@ -66,7 +66,7 @@ void* myMalloc(size_t s)
     if (memoryHead == nullptr)
     {
         printf("First time MyMalloc has been called : Initializing with %d maximum bytes\n", ARENA_SIZE);
-        myMallocInit(sizeof(MALLOC_POOL));
+        myMallocInit( sizeof(char) * ARENA_SIZE);
     }
 
     MemoryMetadata* currentBlock;
@@ -103,9 +103,8 @@ void* myMalloc(size_t s)
 void myFree(void* p)
 {
     memory_access_lock.lock();
-    MemoryMetadata* currentBlock = move( (MemoryMetadata*)p - METADATA_SIZE);
+    MemoryMetadata* currentBlock = (MemoryMetadata*)p - METADATA_SIZE;
     currentBlock->free = 1;
-    memset(currentBlock + METADATA_SIZE, 'x', sizeof(char) * currentBlock->size);
     printf("Freeing Memory Block %p \n", currentBlock);
     memoryCombine();
     memory_access_lock.unlock();

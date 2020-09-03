@@ -1,10 +1,12 @@
 C++ std::unique_ptr
 Know what it is
 Know how to code a very basic example
+std::shared_ptr
 
 Fixed Point Math
 Notation  https://en.wikipedia.org/wiki/Q_(number_format)
 How to convert fixed point representation to floating point?
+
 How to represent and multiply complex numbers?
 
 Function pointers

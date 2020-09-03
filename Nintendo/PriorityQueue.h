@@ -4,7 +4,13 @@
 
 #pragma once
 
+struct PriorityNode
+{
+    int item;
+    int priority;
+};
 
-class PriorityQueue {
+class PriorityQueue
+{
 
 };

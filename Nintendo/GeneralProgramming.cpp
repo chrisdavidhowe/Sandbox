@@ -64,14 +64,7 @@ void checkEndian()
 // implements the following
 // struct s address = <address of struct variable> - <offset of that variable in the struct>
 
-struct DLL_Node {
-    int value = 1;
-    DLL_Node* prev = nullptr;
-    DLL_Node* next = nullptr;
-};
 
-void* container_of(void* p, void* t, void* m)
-{
 /**
  * container_of - cast a member of a structure out to the containing structure
  * @ptr:	the pointer to the member.
@@ -79,14 +72,13 @@ void* container_of(void* p, void* t, void* m)
  * @member:	the name of the member within the struct.
  *
  */
-    //struct s address = <address of struct variable> - <offset of that variable in the struct>
-    //To get the OFFSET of that variable in the containing struct
+    // struct s address = <address of struct variable> - <offset of that variable in the struct>
+
+    // To get the OFFSET of that variable in the containing struct
     // we create a zeroed struct ( i.e., a temp struct with the address 0x0 )
     // so the addresses of any variables in the struct corresponds to the offset of that variable.
-    //a zeroed struct of the correct type with address at zero
-    //typeof(((t*)0)->member) *member_ptr = p;
-    //return (t*) ( (char*)member_ptr - offsetof(t, m);
-}
+    // a zeroed struct of the correct type with address at zero
+
 
 #define offsetof(type, member) ((size_t) &((type*)0)->member)
 
@@ -103,4 +95,11 @@ void myMemMove(void* src, void* dest, size_t size)
     {
         char_dest[i] = char_src[i];
     }
+}
+
+//Perfect Forwarding, use case for RValue Referencing
+template<typename T, typename Arg>
+shared_ptr<T> factory(Arg&& arg)
+{
+    return shared_ptr<T>(new T(std::forward<Arg>(arg)));
 }

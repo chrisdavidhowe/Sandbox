@@ -8,6 +8,7 @@
 
 static const float HALFPOWER { 1.f / sqrt(2.f) };
 
+
 struct Stereo_t {
     float left { 0.f };
     float right { 0.f };

@@ -41,8 +41,8 @@ struct Base {
 };
 
 void Base_Ctor(Base*);
-int Base_Add(Base* b, int a);
-int Base_Sub(Base* b, int a);
+int  Base_Add(Base* b, int a);
+int  Base_Sub(Base* b, int a);
 
 Base_Functable B_functable = { Base_Ctor, Base_Add, Base_Sub };
 
@@ -51,8 +51,8 @@ void Base_Ctor(Base* b)
     printf("Constructing Base Class\n");
     b->vtable = &B_functable;
 }
-int Base_Add(Base* b, int n) {return n + 1; }
-int Base_Sub(Base* b, int n) {return n - 1; }
+int Base_Add(Base* b, int n) { return n + 1; }
+int Base_Sub(Base* b, int n) { return n - 1; }
 
 struct Derived;
 
@@ -92,3 +92,6 @@ int Derived_Sub(struct Derived* d, int n)
 {
     return d->base.vtable->sub(&d->base, n);
 }
+
+
+
