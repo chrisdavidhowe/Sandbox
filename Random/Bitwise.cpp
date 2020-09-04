@@ -37,9 +37,9 @@ unsigned int russianPeasant(unsigned int a, unsigned int b)
 int multiply(int x, int y)
 {
     int out = 0;
+
     while (y)
     {
-        //if y is odd running sum x
         if (y & 1)
         {
             out += x;
@@ -52,25 +52,25 @@ int multiply(int x, int y)
 
 int add(int x, int y)
 {
-    unsigned int bit = 0;
+    unsigned int carry = 0;
     while (y)
     {
-        //calculate carry bit
-        bit = x & y;
+        carry = (x & y) << 1;
         x ^= y;
-        y = bit << 1;
+        y = carry;
     }
     return x;
 }
 
 int sub(int x, int y)
 {
-    unsigned int bit = 0;
+    unsigned int carry;
+
     while (y)
     {
-        bit = ~x & y;
+        carry = (~x & y) << 1;
         x ^= y;
-        y = bit << 1;
+        y = carry;
     }
     return x;
 }

@@ -3,28 +3,40 @@
 //
 
 #include "Fibonacci.h"
+#include <string>
+#include <iostream>
+#include <map>
+using namespace std;
 
 int Fibonacci::calculate(int n)
 {
     int output = 0;
-    if (n <= 1)
-    {
-        return n;
+    if (n <= 1){ return n; }
+
+    //Recursive
+    if ( !memo.count(n) ) {
+        output = (calculate(n - 1) + calculate(n - 2));
+        memo.insert({n, output});
     }
     else
     {
-        auto iterator = memoization_map_.find(n);
-        if ( iterator != memoization_map_.end() )
-        {
-            output = iterator->second;
-            return output;
-        }
-        else
-        {
-            memoization_map_.insert(std::pair<int, int>(n, output));
-        }
-
-        output = (calculate(n - 1) + calculate(n - 2));
-        return output;
+        output = memo.at(n);
     }
+
+
+    //Iterative
+    /*
+    int n1 = 0;
+    int n2 = 1;
+    for (int i = 0; i < n; ++i)
+    {
+        output = n1 + n2;
+        n2 = n1;
+        n1 = output;
+        //cout << output << ", ";
+    }
+    */
+
+    cout << output << ", ";
+    return output;
 }

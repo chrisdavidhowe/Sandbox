@@ -11,5 +11,5 @@ class Fibonacci
 public:
     int calculate(int n);
 private:
-    std::map<int, int> memoization_map_;
+    std::map<int, int> memo;
 };

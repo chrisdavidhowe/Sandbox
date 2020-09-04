@@ -17,12 +17,11 @@ void QuickSort::sort(int *data, int low, int high)
 
 int QuickSort::partition(int* data, int low, int high)
 {
-
     int pivot = data[high];
 
     int low_p = low;
 
-    for (int i = low; i < high; ++i)
+    for (int i = low; i < high - 1; ++i)
     {
         if (data[i] < pivot)
         {

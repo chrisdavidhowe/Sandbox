@@ -28,11 +28,29 @@ Complex Complex::mult(Complex& a, Complex& b)
     return out;
 }
 
+Complex operator *(const Complex a, const Complex b)
+{
+    Complex out;
+    out.real = (a.real * b.real) - (a.imag * b.imag);
+    out.imag = (a.real * b.imag) + (a.imag * b.real);
+    return out;
+}
+
+Complex operator /(const Complex a, const Complex b)
+{
+    Complex out;
+    float div = (b.real * b.real) + (b.imag * b.imag);
+    out.real = (a.real * b.real) - (a.imag * b.imag);
+    out.imag = (a.real * b.imag) + (a.imag * b.real);
+    out.real /= div;
+    out.imag /= div;
+    return out;
+}
+
 Complex Complex::divide(Complex& a, Complex& b)
 {
     Complex out;
     float d = (b.real * b.real) + (b.imag * b.imag);
-
     out.real = (a.real * b.real) - (a.imag * b.imag);
     out.imag = (a.real * b.imag) + (a.imag * b.real);
     out.real /= d;

@@ -11,11 +11,22 @@ int main (int argc, char *argv[])
     Test tests(data, length);
 
     //tests.nintendoTests();
-    //tests.fixedPointTests();
+        //tests.fixedPointTests();
 
-    string test = "1234578591";
+        /*
+    string test = "-1234";
     int out = myAtoi(test);
     printf("%d\n", out);
+    int in = -1234;
+    string o = myIntToString(in);
+    printf("%s\n", o.c_str());
+         */
+        //tests.bitWiseTests();
+
+        Fibonacci fib;
+
+        fib.calculate(10);
+
 }
 
 

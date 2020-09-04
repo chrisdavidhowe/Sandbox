@@ -8,6 +8,14 @@
 
 using namespace std;
 
+
+void copyWithoutTemp(int& x, int& y)
+{
+    x = x + y;
+    y = x - y;
+    x = x - y;
+}
+
 string byteArrayToString(int* array, int size)
 {
     char output[size * 10];
@@ -28,16 +36,12 @@ string hexArrayToString(uint8_t* array, int size)
 
     for (int i = 0; i < size - 1; ++i)
     {
-        //second nibble
         output += hex[(array[i] >> 4) & 0xF];
-        //first nibble
         output += hex[(array[i] & 0xF)];
         output += ":";
     }
 
-    //second nibble
     output += hex[(array[size-1] >> 4) & 0xF];
-    //first nibble
     output += hex[(array[size-1] & 0xF)];
 
     printf("Hex Output %s\n", output.c_str());
@@ -102,4 +106,37 @@ template<typename T, typename Arg>
 shared_ptr<T> factory(Arg&& arg)
 {
     return shared_ptr<T>(new T(std::forward<Arg>(arg)));
+}
+
+void reverseWordsInPlace(string s)
+{
+    int i = 0;
+    int j = s.length() - 1;
+    while (i < j)
+    {
+        swap(s[i++], s[j--]);
+    }
+
+    i = 0;
+    j = 0;
+    int n = 0;
+    for (int k = 0; k < s.length(); ++k)
+    {
+        if (s[k] == ' ')
+        {
+            j = k - 1;
+            while (i < j)
+            {
+                swap(s[i++], s[j--]);
+            }
+            i = k + 1;
+            n = i;
+        }
+    }
+
+    j = s.length() - 1;
+    while (n < j)
+    {
+        swap(s[n++], s[j--]);
+    }
 }

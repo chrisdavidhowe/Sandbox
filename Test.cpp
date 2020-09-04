@@ -277,7 +277,6 @@ void Test::bitWiseTests()
     //s += int2bin(b);
     //printf("%s\n", s.c_str());
 
-    /*
     int x = 4;
     int y = 10;
 
@@ -289,7 +288,7 @@ void Test::bitWiseTests()
 
     result = sub(x, y);
     printf("%d - %d = %d\n",x, y, result);
-    */
+
 }
 
 
